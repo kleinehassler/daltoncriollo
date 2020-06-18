@@ -1,0 +1,9 @@
+C:\daltoncriollo\daltoncriollo\CapaNegocios\bin\Debug\CapaNegocios.dll
+C:\daltoncriollo\daltoncriollo\CapaNegocios\bin\Debug\CapaNegocios.pdb
+C:\daltoncriollo\daltoncriollo\CapaNegocios\bin\Debug\CapaDatos.dll
+C:\daltoncriollo\daltoncriollo\CapaNegocios\bin\Debug\CapaEntidad.dll
+C:\daltoncriollo\daltoncriollo\CapaNegocios\bin\Debug\CapaDatos.pdb
+C:\daltoncriollo\daltoncriollo\CapaNegocios\bin\Debug\CapaEntidad.pdb
+C:\daltoncriollo\daltoncriollo\CapaNegocios\obj\Debug\CapaNegocios.csprojResolveAssemblyReference.cache
+C:\daltoncriollo\daltoncriollo\CapaNegocios\obj\Debug\CapaNegocios.dll
+C:\daltoncriollo\daltoncriollo\CapaNegocios\obj\Debug\CapaNegocios.pdb

@@ -1,0 +1,7 @@
+C:\daltoncriollo\daltoncriollo\CapaDatos\bin\Debug\CapaDatos.dll
+C:\daltoncriollo\daltoncriollo\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\daltoncriollo\daltoncriollo\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\daltoncriollo\daltoncriollo\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\daltoncriollo\daltoncriollo\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\daltoncriollo\daltoncriollo\CapaDatos\obj\Debug\CapaDatos.dll
+C:\daltoncriollo\daltoncriollo\CapaDatos\obj\Debug\CapaDatos.pdb

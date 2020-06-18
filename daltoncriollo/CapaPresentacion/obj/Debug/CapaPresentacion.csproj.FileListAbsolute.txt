@@ -1,0 +1,17 @@
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaNegocios.dll
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaNegocios.pdb
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Articulo.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.MenuPrincipal.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
