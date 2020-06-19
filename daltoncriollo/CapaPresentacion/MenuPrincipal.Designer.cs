@@ -456,6 +456,7 @@
             // 
             // btnMovimiento
             // 
+            this.btnMovimiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMovimiento.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMovimiento.FlatAppearance.BorderSize = 0;
             this.btnMovimiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
@@ -472,6 +473,7 @@
             // 
             // btnDatos
             // 
+            this.btnDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDatos.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDatos.FlatAppearance.BorderSize = 0;
             this.btnDatos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
@@ -499,6 +501,7 @@
             // 
             // btnResumen
             // 
+            this.btnResumen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResumen.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnResumen.FlatAppearance.BorderSize = 0;
             this.btnResumen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
@@ -515,6 +518,7 @@
             // 
             // btnUsuario
             // 
+            this.btnUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuario.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnUsuario.FlatAppearance.BorderSize = 0;
             this.btnUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;

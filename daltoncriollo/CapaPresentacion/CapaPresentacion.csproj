@@ -83,6 +83,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_Bodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Bodega.Designer.cs">
+      <DependentUpon>P_Bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Produccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Produccion.Designer.cs">
+      <DependentUpon>P_Produccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Sujetos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Sujetos.Designer.cs">
+      <DependentUpon>P_Sujetos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Usuarios.Designer.cs">
+      <DependentUpon>P_Usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +124,18 @@
     </Compile>
     <EmbeddedResource Include="P_Articulo.resx">
       <DependentUpon>P_Articulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Bodega.resx">
+      <DependentUpon>P_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Produccion.resx">
+      <DependentUpon>P_Produccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Sujetos.resx">
+      <DependentUpon>P_Sujetos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Usuarios.resx">
+      <DependentUpon>P_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

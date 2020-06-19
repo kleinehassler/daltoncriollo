@@ -15,3 +15,6 @@ C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.MenuPrincipal.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Bodega.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Sujetos.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Produccion.resources

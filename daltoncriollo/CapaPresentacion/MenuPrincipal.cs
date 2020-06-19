@@ -70,7 +70,11 @@ namespace CapaPresentacion
 
         private void btnDatos_Click(object sender, EventArgs e)
         {
-            smDatos.Visible = true;
+            if (smDatos.Visible == true)
+                smDatos.Visible = false;
+            else
+                smDatos.Visible = true;
+            
             smMoviento.Visible = false;
             smResumen.Visible = false;
             smUsuario.Visible = false;
@@ -100,7 +104,11 @@ namespace CapaPresentacion
 
         private void btnMovimiento_Click(object sender, EventArgs e)
         {
-            smMoviento.Visible = true;
+            if (smMoviento.Visible == true)
+                smMoviento.Visible = false;
+            else
+                smMoviento.Visible = true;
+
             smDatos.Visible = false;
             smResumen.Visible = false;
             smUsuario.Visible = false;
@@ -130,7 +138,11 @@ namespace CapaPresentacion
 
         private void btnResumen_Click(object sender, EventArgs e)
         {
-            smResumen.Visible = true;
+            if (smResumen.Visible == true)
+                smResumen.Visible = false;
+            else
+                smResumen.Visible = true;
+
             smDatos.Visible = false;
             smMoviento.Visible = false;
             smUsuario.Visible = false;
@@ -170,7 +182,11 @@ namespace CapaPresentacion
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            smUsuario.Visible = true;
+            if (smUsuario.Visible == true)
+                smUsuario.Visible = false;
+            else
+                smUsuario.Visible = true;
+
             smDatos.Visible = false;
             smMoviento.Visible = false;
             smResumen.Visible = false;

@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CapaPresentacion
+{
+    public partial class P_Sujetos : Form
+    {
+        public P_Sujetos()
+        {
+            InitializeComponent();
+        }
+    }
+}
