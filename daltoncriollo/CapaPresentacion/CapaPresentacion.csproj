@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSistema.Designer.cs">
+      <DependentUpon>frmSistema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="P_Usuarios.Designer.cs">
       <DependentUpon>P_Usuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmSistema.resx">
+      <DependentUpon>frmSistema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>

@@ -18,3 +18,5 @@ C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Inici
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Bodega.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Sujetos.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Produccion.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmSistema.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Usuarios.resources
