@@ -36,22 +36,23 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtIdeArticulo = new System.Windows.Forms.TextBox();
+            this.cboTipoArticulo = new System.Windows.Forms.ComboBox();
+            this.txtUnidad = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmdSave = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmdNew = new System.Windows.Forms.Button();
+            this.cmdEdit = new System.Windows.Forms.Button();
+            this.cmdDelete = new System.Windows.Forms.Button();
+            this.cmdPrint = new System.Windows.Forms.Button();
+            this.cmdClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -126,16 +127,17 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.textBox3);
+            this.tabPage2.Controls.Add(this.txtIdeArticulo);
+            this.tabPage2.Controls.Add(this.cboTipoArticulo);
+            this.tabPage2.Controls.Add(this.txtUnidad);
+            this.tabPage2.Controls.Add(this.txtPrecio);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.cmdSave);
+            this.tabPage2.Controls.Add(this.txtNombre);
+            this.tabPage2.Controls.Add(this.txtCodigo);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Font = new System.Drawing.Font("Miriam", 8.25F);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -146,15 +148,55 @@
             this.tabPage2.Text = "Registro";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txtIdeArticulo
+            // 
+            this.txtIdeArticulo.Location = new System.Drawing.Point(325, 174);
+            this.txtIdeArticulo.Name = "txtIdeArticulo";
+            this.txtIdeArticulo.Size = new System.Drawing.Size(100, 19);
+            this.txtIdeArticulo.TabIndex = 16;
+            this.txtIdeArticulo.Visible = false;
+            // 
+            // cboTipoArticulo
+            // 
+            this.cboTipoArticulo.FormattingEnabled = true;
+            this.cboTipoArticulo.Location = new System.Drawing.Point(146, 149);
+            this.cboTipoArticulo.Name = "cboTipoArticulo";
+            this.cboTipoArticulo.Size = new System.Drawing.Size(279, 19);
+            this.cboTipoArticulo.TabIndex = 15;
+            // 
+            // txtUnidad
+            // 
+            this.txtUnidad.Location = new System.Drawing.Point(146, 119);
+            this.txtUnidad.Name = "txtUnidad";
+            this.txtUnidad.Size = new System.Drawing.Size(279, 19);
+            this.txtUnidad.TabIndex = 14;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(146, 98);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(279, 19);
+            this.txtPrecio.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(26, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 15);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Tipo de Articulo";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(91, 123);
+            this.label5.Location = new System.Drawing.Point(80, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
+            this.label5.Size = new System.Drawing.Size(53, 15);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Stock";
+            this.label5.Text = "Unidad";
             // 
             // label4
             // 
@@ -176,36 +218,37 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Nombre";
             // 
-            // button6
+            // cmdSave
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(6, 271);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(164, 48);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Guardar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.cmdSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdSave.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cmdSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdSave.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdSave.ForeColor = System.Drawing.Color.White;
+            this.cmdSave.Location = new System.Drawing.Point(6, 271);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(164, 48);
+            this.cmdSave.TabIndex = 8;
+            this.cmdSave.Text = "Guardar";
+            this.cmdSave.UseVisualStyleBackColor = false;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(146, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(279, 19);
-            this.textBox2.TabIndex = 2;
+            this.txtNombre.Location = new System.Drawing.Point(146, 69);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(279, 19);
+            this.txtNombre.TabIndex = 2;
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(146, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 19);
-            this.textBox1.TabIndex = 1;
+            this.txtCodigo.Location = new System.Drawing.Point(146, 44);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(279, 19);
+            this.txtCodigo.TabIndex = 1;
             // 
             // label2
             // 
@@ -217,133 +260,104 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Codigo";
             // 
-            // button1
+            // cmdNew
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(18, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 48);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cmdNew.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdNew.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdNew.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cmdNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdNew.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdNew.ForeColor = System.Drawing.Color.White;
+            this.cmdNew.Location = new System.Drawing.Point(18, 394);
+            this.cmdNew.Name = "cmdNew";
+            this.cmdNew.Size = new System.Drawing.Size(75, 48);
+            this.cmdNew.TabIndex = 3;
+            this.cmdNew.Text = "Agregar";
+            this.cmdNew.UseVisualStyleBackColor = false;
+            this.cmdNew.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // cmdEdit
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(99, 394);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 48);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.cmdEdit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdEdit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdEdit.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cmdEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdEdit.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEdit.ForeColor = System.Drawing.Color.White;
+            this.cmdEdit.Location = new System.Drawing.Point(99, 394);
+            this.cmdEdit.Name = "cmdEdit";
+            this.cmdEdit.Size = new System.Drawing.Size(75, 48);
+            this.cmdEdit.TabIndex = 4;
+            this.cmdEdit.Text = "Editar";
+            this.cmdEdit.UseVisualStyleBackColor = false;
+            this.cmdEdit.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // cmdDelete
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(181, 394);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 48);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.cmdDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdDelete.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cmdDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdDelete.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdDelete.ForeColor = System.Drawing.Color.White;
+            this.cmdDelete.Location = new System.Drawing.Point(181, 394);
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Size = new System.Drawing.Size(75, 48);
+            this.cmdDelete.TabIndex = 5;
+            this.cmdDelete.Text = "Eliminar";
+            this.cmdDelete.UseVisualStyleBackColor = false;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
-            // button4
+            // cmdPrint
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(263, 393);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 48);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Imprimir";
-            this.button4.UseVisualStyleBackColor = false;
+            this.cmdPrint.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdPrint.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdPrint.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cmdPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdPrint.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdPrint.ForeColor = System.Drawing.Color.White;
+            this.cmdPrint.Location = new System.Drawing.Point(263, 393);
+            this.cmdPrint.Name = "cmdPrint";
+            this.cmdPrint.Size = new System.Drawing.Size(75, 48);
+            this.cmdPrint.TabIndex = 6;
+            this.cmdPrint.Text = "Imprimir";
+            this.cmdPrint.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // cmdClose
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(345, 393);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 48);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Cerrar";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 155);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 15);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Tipo de Articulo";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(146, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(279, 19);
-            this.textBox3.TabIndex = 13;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(146, 119);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(279, 19);
-            this.textBox4.TabIndex = 14;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(146, 155);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 19);
-            this.comboBox1.TabIndex = 15;
+            this.cmdClose.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdClose.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.cmdClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdClose.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdClose.ForeColor = System.Drawing.Color.White;
+            this.cmdClose.Location = new System.Drawing.Point(345, 393);
+            this.cmdClose.Name = "cmdClose";
+            this.cmdClose.Size = new System.Drawing.Size(75, 48);
+            this.cmdClose.TabIndex = 7;
+            this.cmdClose.Text = "Cerrar";
+            this.cmdClose.UseVisualStyleBackColor = false;
             // 
             // P_Articulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 503);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmdClose);
+            this.Controls.Add(this.cmdPrint);
+            this.Controls.Add(this.cmdDelete);
+            this.Controls.Add(this.cmdEdit);
+            this.Controls.Add(this.cmdNew);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -367,22 +381,23 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button cmdNew;
+        private System.Windows.Forms.Button cmdEdit;
+        private System.Windows.Forms.Button cmdDelete;
+        private System.Windows.Forms.Button cmdPrint;
+        private System.Windows.Forms.Button cmdClose;
+        private System.Windows.Forms.Button cmdSave;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cboTipoArticulo;
+        private System.Windows.Forms.TextBox txtUnidad;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtIdeArticulo;
     }
 }
 
