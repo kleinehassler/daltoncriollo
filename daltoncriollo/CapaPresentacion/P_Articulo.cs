@@ -92,19 +92,53 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
+            txtCual.Text=2
+
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtCodigo.Text = dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString();
                 txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
                 txtUnidad.Text = dataGridView1.CurrentRow.Cells["Unidad"].Value.ToString();
-                cboTipoArticulo.Text = dataGridView1.CurrentRow.Cells["TipoArt"].Value.ToString();
+                //cboTipoArticulo.Text = dataGridView1.CurrentRow.Cells["TipoArt"].Value.ToString();
                 txtIdeArticulo.Text = dataGridView1.CurrentRow.Cells["IdeArticulo"].Value.ToString();
             }
+
         }
 
         private void cmdSave_Click(object sender, EventArgs e)
         {
+
+            if (txtCual.Text=)
+            {
+                try
+                {
+                    string Rpta = "";
+                    if (txtNombre.Text == string.Empty)
+                    {
+                        this.MensajeError("Falta de Ingresar");
+                        ErrorIcono.SetError(txtNombre, "Ingrese Nombre");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+
+                }
+            }
+            if (cmdEdit.Tag = "1")
+            {
+                try
+                {
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+
+                }
+            }
 
         }
 
@@ -120,6 +154,8 @@ namespace CapaPresentacion
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            txtCual.Text=1
+
             this.Limpiar();
         }
     }
