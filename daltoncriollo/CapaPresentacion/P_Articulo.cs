@@ -22,29 +22,72 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+
+        private void Listar()
+        {
+            try
+            {
+                dataGridView1.DataSource = N_Articulo.Listar();
+                this.formato();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void Buscar()
+        {
+            try
+            {
+                dataGridView1.DataSource = N_Articulo.Buscar(txtBuscar.Text);
+                this.formato();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         private void P_Articulo_Load(object sender, EventArgs e)
         {
-            LisArt();
+            this.Listar();
+        }
+
+        private void formato()
+        {
+            dataGridView1.Columns[0].Width = 150;
+            dataGridView1.Columns[1].Width = 100;
+            dataGridView1.Columns[2].Width = 200;
+            dataGridView1.Columns[3].Width = 100;
+            dataGridView1.Columns[4].Width = 100;
+            dataGridView1.Columns[5].Visible=false;
 
         }
 
-        E_Articulo objEntidad = new E_Articulo();
-        N_Articulo objNegocio = new N_Articulo();
-
-        void LisArt()
+        private void Limpiar()
         {
-            DataTable dt = objNegocio.N_LisArt();
-            dataGridView1.DataSource = dt;
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtPrecio.Clear();
+            txtUnidad.Clear();
+            
+        }
 
+        private void MensajeError(string Mensaje)
+        {
+            MessageBox.Show(Mensaje, "D Criollo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+        private void MensajeOk(string Mensaje)
+        {
+            MessageBox.Show(Mensaje, "D Criollo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtCodigo.Text = " ";
-            txtNombre.Text = " ";
-            txtPrecio.Text = "0.00";
-            txtUnidad.Text = "Unidad";
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,6 +111,16 @@ namespace CapaPresentacion
         private void cmdDelete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Buscar();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            this.Limpiar();
         }
     }
 }

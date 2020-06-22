@@ -43,7 +43,7 @@ namespace CapaDatos
                 }
                 else
                 {
-                    Cadena.ConnectionString=Cadena.ConnectionString + " User id = " + this.Usuario+"; Password = "+ this.Clave+";";
+                    Cadena.ConnectionString=Cadena.ConnectionString + " User id = " + this.Usuario+"; Password = "+ this.Clave+"; ";
                 }
             }
             catch(Exception ex)

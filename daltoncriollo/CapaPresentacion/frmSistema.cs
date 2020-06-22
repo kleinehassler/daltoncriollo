@@ -113,5 +113,13 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void articulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            P_Articulo frm = new P_Articulo();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
     }
 }

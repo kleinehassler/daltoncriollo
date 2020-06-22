@@ -16,9 +16,9 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new P_Articulo());
+            //Application.Run(new P_Articulo());
             //Application.Run(new MenuPrincipal());
-            //Application.Run(new frmSistema());
+            Application.Run(new frmSistema());
 
         }
     }
