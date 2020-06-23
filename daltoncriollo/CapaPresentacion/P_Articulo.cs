@@ -62,6 +62,7 @@ namespace CapaPresentacion
             dataGridView1.Columns[3].Width = 100;
             dataGridView1.Columns[4].Width = 100;
             dataGridView1.Columns[5].Visible=false;
+            dataGridView1.Columns[6].Visible = false;
 
         }
 
@@ -71,6 +72,7 @@ namespace CapaPresentacion
             txtNombre.Clear();
             txtPrecio.Clear();
             txtUnidad.Clear();
+            ErrorIcono.Clear();
             
         }
 
@@ -92,17 +94,26 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtCual.Text=2
-
-
+            this.Limpiar();
+            txtCual.Text = "2";
+            tabControl1.SelectedIndex = 1;
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 txtCodigo.Text = dataGridView1.CurrentRow.Cells["Codigo"].Value.ToString();
                 txtNombre.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
                 txtPrecio.Text = dataGridView1.CurrentRow.Cells["Precio"].Value.ToString();
                 txtUnidad.Text = dataGridView1.CurrentRow.Cells["Unidad"].Value.ToString();
-                //cboTipoArticulo.Text = dataGridView1.CurrentRow.Cells["TipoArt"].Value.ToString();
+                txtTipoArt.Text = dataGridView1.CurrentRow.Cells["ntipoart"].Value.ToString();
                 txtIdeArticulo.Text = dataGridView1.CurrentRow.Cells["IdeArticulo"].Value.ToString();
+                if (dataGridView1.CurrentRow.Cells["ntipoart"].Value.Equals(1))
+                {
+                    rbPT.Select();
+                }
+                else
+                {
+                    rbMP.Select();
+                }
+
             }
 
         }
@@ -110,7 +121,7 @@ namespace CapaPresentacion
         private void cmdSave_Click(object sender, EventArgs e)
         {
 
-            if (txtCual.Text=)
+            if (txtCual.Text == "1")
             {
                 try
                 {
@@ -118,8 +129,33 @@ namespace CapaPresentacion
                     if (txtNombre.Text == string.Empty)
                     {
                         this.MensajeError("Falta de Ingresar");
-                        ErrorIcono.SetError(txtNombre, "Ingrese Nombre");
+                        ErrorIcono.SetError(txtNombre, "Ingrese Nombre del Articulo");
+                    }else if(txtPrecio.Text == string.Empty)
+                    {
+                        this.MensajeError("Falta de Ingresar");
+                        ErrorIcono.SetError(txtPrecio, "Ingrese Precio de Articulo");
                     }
+                    else if (txtUnidad.Text == string.Empty)
+                    {
+                        this.MensajeError("Falta de Ingresar");
+                        ErrorIcono.SetError(txtUnidad, "Ingrese Unidad del Articulo");
+                    }
+                    else
+                    {
+                        Rpta = N_Articulo.Insertar(txtNombre.Text.Trim(), txtCodigo.Text.Trim(),Convert.ToDecimal( txtPrecio.Text), Convert.ToInt32(txtTipoArt.Text) , 0, txtUnidad.Text.Trim());
+                        if (Rpta.Equals("OK"))
+                        {
+                            this.MensajeOk("Se Registro un Nuevo Articulo");
+                            this.Limpiar();
+                            this.Listar();
+                            tabControl1.SelectedIndex = 0;
+                        }
+                        else
+                        {
+                            this.MensajeError(Rpta);
+                        }
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -127,10 +163,41 @@ namespace CapaPresentacion
 
                 }
             }
-            if (cmdEdit.Tag = "1")
+            if (txtCual.Text == "2")
             {
                 try
                 {
+                    string Rpta = "";
+                    if (txtNombre.Text == string.Empty)
+                    {
+                        this.MensajeError("Falta de Ingresar");
+                        ErrorIcono.SetError(txtNombre, "Ingrese Nombre del Articulo");
+                    }
+                    else if (txtPrecio.Text == string.Empty)
+                    {
+                        this.MensajeError("Falta de Ingresar");
+                        ErrorIcono.SetError(txtPrecio, "Ingrese Precio de Articulo");
+                    }
+                    else if (txtUnidad.Text == string.Empty)
+                    {
+                        this.MensajeError("Falta de Ingresar");
+                        ErrorIcono.SetError(txtUnidad, "Ingrese Unidad del Articulo");
+                    }
+                    else
+                    {
+                        Rpta = N_Articulo.Actualizar(Convert.ToInt32(txtIdeArticulo.Text), txtNombre.Text.Trim(), txtCodigo.Text.Trim(), Convert.ToDecimal(txtPrecio.Text), Convert.ToInt32(txtTipoArt.Text), 0, txtUnidad.Text.Trim());
+                        if (Rpta.Equals("OK"))
+                        {
+                            this.MensajeOk("Se Actaulizo los Datos del Articulo");
+                            this.Limpiar();
+                            this.Listar();
+                            tabControl1.SelectedIndex = 0;
+                        }
+                        else
+                        {
+                            this.MensajeError(Rpta);
+                        }
+                    }
 
                 }
                 catch (Exception ex)
@@ -154,9 +221,29 @@ namespace CapaPresentacion
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            txtCual.Text=1
-
+            txtCual.Text = "1";
+            tabControl1.SelectedIndex = 1;
             this.Limpiar();
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void rbPT_CheckedChanged(object sender, EventArgs e)
+        {
+            txtTipoArt.Text = "1";
+        }
+
+        private void rbMP_CheckedChanged(object sender, EventArgs e)
+        {
+            txtTipoArt.Text = "2";
+        }
+
+        private void txtTipoArt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

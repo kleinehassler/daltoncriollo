@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -39,6 +39,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtCual = new System.Windows.Forms.TextBox();
+            this.og01 = new System.Windows.Forms.GroupBox();
+            this.rbMP = new System.Windows.Forms.RadioButton();
+            this.rbPT = new System.Windows.Forms.RadioButton();
             this.txtIdeArticulo = new System.Windows.Forms.TextBox();
             this.txtUnidad = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -55,11 +59,8 @@
             this.cmdPrint = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.og01 = new System.Windows.Forms.GroupBox();
-            this.rbPT = new System.Windows.Forms.RadioButton();
-            this.rbMP = new System.Windows.Forms.RadioButton();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.txtCual = new System.Windows.Forms.TextBox();
+            this.txtTipoArt = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -125,14 +126,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -141,25 +142,27 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(726, 276);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txtTipoArt);
             this.tabPage2.Controls.Add(this.txtCual);
             this.tabPage2.Controls.Add(this.og01);
             this.tabPage2.Controls.Add(this.txtIdeArticulo);
@@ -181,6 +184,50 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtCual
+            // 
+            this.txtCual.Location = new System.Drawing.Point(482, 17);
+            this.txtCual.Name = "txtCual";
+            this.txtCual.Size = new System.Drawing.Size(100, 19);
+            this.txtCual.TabIndex = 18;
+            this.txtCual.Text = "0";
+            this.txtCual.Visible = false;
+            // 
+            // og01
+            // 
+            this.og01.Controls.Add(this.rbMP);
+            this.og01.Controls.Add(this.rbPT);
+            this.og01.Location = new System.Drawing.Point(159, 149);
+            this.og01.Name = "og01";
+            this.og01.Size = new System.Drawing.Size(137, 66);
+            this.og01.TabIndex = 17;
+            this.og01.TabStop = false;
+            this.og01.Text = "Articulos son";
+            // 
+            // rbMP
+            // 
+            this.rbMP.AutoSize = true;
+            this.rbMP.Location = new System.Drawing.Point(7, 41);
+            this.rbMP.Name = "rbMP";
+            this.rbMP.Size = new System.Drawing.Size(86, 15);
+            this.rbMP.TabIndex = 1;
+            this.rbMP.Text = "Materia Prima";
+            this.rbMP.UseVisualStyleBackColor = true;
+            this.rbMP.CheckedChanged += new System.EventHandler(this.rbMP_CheckedChanged);
+            // 
+            // rbPT
+            // 
+            this.rbPT.AutoSize = true;
+            this.rbPT.Checked = true;
+            this.rbPT.Location = new System.Drawing.Point(7, 19);
+            this.rbPT.Name = "rbPT";
+            this.rbPT.Size = new System.Drawing.Size(117, 15);
+            this.rbPT.TabIndex = 0;
+            this.rbPT.TabStop = true;
+            this.rbPT.Text = "Producto Terminado";
+            this.rbPT.UseVisualStyleBackColor = true;
+            this.rbPT.CheckedChanged += new System.EventHandler(this.rbPT_CheckedChanged);
             // 
             // txtIdeArticulo
             // 
@@ -356,6 +403,7 @@
             this.cmdClose.TabIndex = 7;
             this.cmdClose.Text = "Cerrar";
             this.cmdClose.UseVisualStyleBackColor = false;
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
             // btnNew
             // 
@@ -376,50 +424,18 @@
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // og01
-            // 
-            this.og01.Controls.Add(this.rbMP);
-            this.og01.Controls.Add(this.rbPT);
-            this.og01.Location = new System.Drawing.Point(159, 149);
-            this.og01.Name = "og01";
-            this.og01.Size = new System.Drawing.Size(137, 66);
-            this.og01.TabIndex = 17;
-            this.og01.TabStop = false;
-            this.og01.Text = "Articulos son";
-            // 
-            // rbPT
-            // 
-            this.rbPT.AutoSize = true;
-            this.rbPT.Checked = true;
-            this.rbPT.Location = new System.Drawing.Point(7, 19);
-            this.rbPT.Name = "rbPT";
-            this.rbPT.Size = new System.Drawing.Size(117, 15);
-            this.rbPT.TabIndex = 0;
-            this.rbPT.TabStop = true;
-            this.rbPT.Text = "Producto Terminado";
-            this.rbPT.UseVisualStyleBackColor = true;
-            // 
-            // rbMP
-            // 
-            this.rbMP.AutoSize = true;
-            this.rbMP.Location = new System.Drawing.Point(7, 41);
-            this.rbMP.Name = "rbMP";
-            this.rbMP.Size = new System.Drawing.Size(86, 15);
-            this.rbMP.TabIndex = 1;
-            this.rbMP.Text = "Materia Prima";
-            this.rbMP.UseVisualStyleBackColor = true;
-            // 
             // ErrorIcono
             // 
             this.ErrorIcono.ContainerControl = this;
             // 
-            // txtCual
+            // txtTipoArt
             // 
-            this.txtCual.Location = new System.Drawing.Point(482, 17);
-            this.txtCual.Name = "txtCual";
-            this.txtCual.Size = new System.Drawing.Size(100, 19);
-            this.txtCual.TabIndex = 18;
-            this.txtCual.Text = "0";
+            this.txtTipoArt.Location = new System.Drawing.Point(349, 167);
+            this.txtTipoArt.Name = "txtTipoArt";
+            this.txtTipoArt.Size = new System.Drawing.Size(100, 19);
+            this.txtTipoArt.TabIndex = 19;
+            this.txtTipoArt.Text = "1";
+            this.txtTipoArt.TextChanged += new System.EventHandler(this.txtTipoArt_TextChanged);
             // 
             // P_Articulo
             // 
@@ -480,6 +496,7 @@
         private System.Windows.Forms.RadioButton rbPT;
         private System.Windows.Forms.ErrorProvider ErrorIcono;
         private System.Windows.Forms.TextBox txtCual;
+        private System.Windows.Forms.TextBox txtTipoArt;
     }
 }
 
