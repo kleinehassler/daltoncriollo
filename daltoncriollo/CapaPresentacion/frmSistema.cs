@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+
 
 namespace CapaPresentacion
 {
@@ -120,6 +122,11 @@ namespace CapaPresentacion
             frm.MdiParent = this;
             frm.Show();
 
+        }
+
+        private void produccionToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

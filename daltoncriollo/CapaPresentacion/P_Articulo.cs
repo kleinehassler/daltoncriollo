@@ -61,7 +61,7 @@ namespace CapaPresentacion
             dataGridView1.Columns[2].Width = 200;
             dataGridView1.Columns[3].Width = 100;
             dataGridView1.Columns[4].Width = 100;
-            dataGridView1.Columns[5].Visible=false;
+            dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].Visible = false;
 
         }

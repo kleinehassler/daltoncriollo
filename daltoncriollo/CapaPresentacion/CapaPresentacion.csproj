@@ -51,6 +51,8 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DCRIOLLO1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DCRIOLLO1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmSistema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +153,18 @@
     <EmbeddedResource Include="P_Usuarios.resx">
       <DependentUpon>P_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="DCRIOLLO1DataSet.xsc">
+      <DependentUpon>DCRIOLLO1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DCRIOLLO1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DCRIOLLO1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DCRIOLLO1DataSet.xss">
+      <DependentUpon>DCRIOLLO1DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
