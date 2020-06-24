@@ -211,7 +211,43 @@ namespace CapaPresentacion
 
         private void cmdDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    txtIdeArticulo.Text = dataGridView1.CurrentRow.Cells["IdeArticulo"].Value.ToString();
 
+                    DialogResult Opcion;
+                    Opcion = MessageBox.Show("Eliminar", "D Criollo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (Opcion == DialogResult.OK)
+                    {
+                        int Codigo;
+                        String Rpta = "";
+                        Codigo = Convert.ToInt32(txtIdeArticulo.Text);
+                        Rpta = N_Articulo.Elliminar(Codigo, " ", " ", 0, 0, 0, " ");
+
+                        if (Rpta.Equals("OK"))
+                        {
+                            this.MensajeOk("Registro Eliminado");
+                        }
+
+                        else
+                        {
+                            this.MensajeError(Rpta);
+                        }
+                    }
+                    this.Listar();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un Articulo");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
