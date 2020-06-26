@@ -33,5 +33,15 @@ namespace CapaPresentacion.Properties {
                 return ((string)(this["DCRIOLLO1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=DCRIOLLO;Integrated Security=True")]
+        public string DCRIOLLOConnectionString {
+            get {
+                return ((string)(this["DCRIOLLOConnectionString"]));
+            }
+        }
     }
 }
