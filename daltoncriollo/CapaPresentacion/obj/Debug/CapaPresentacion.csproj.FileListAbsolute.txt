@@ -20,3 +20,10 @@ C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Suj
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Produccion.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmSistema.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Usuarios.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frmReporte_ListaArticulo.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frm_rptListaBodega.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frm_rptListoDocumentos.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frm_rpt_ListaUsuarios.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.Rpt_Form_ListaSujetos.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\RdlCompile.cache
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\RdlCompile.compiled

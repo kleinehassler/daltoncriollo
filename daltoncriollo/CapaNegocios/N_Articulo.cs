@@ -73,7 +73,7 @@ namespace CapaNegocios
             }
         }
 
-        public static string Elliminar(int idearticulo, string nombreart, string codigoart, decimal precioart, int tipoart, decimal stock, string unidad)
+        public static string Eliminar(int idearticulo, string nombreart, string codigoart, decimal precioart, int tipoart, decimal stock, string unidad)
         {
             D_Articulo Datos = new D_Articulo();
             E_Articulo Obj = new E_Articulo();

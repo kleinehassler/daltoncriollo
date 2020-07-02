@@ -49,6 +49,8 @@ namespace CapaDatos
             SqlConnection SqlCon = new SqlConnection();
             try
             {
+                
+
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("spBuscarBodega", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;

@@ -281,5 +281,11 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void cmdPrint_Click(object sender, EventArgs e)
+        {
+            Reportes.frmReporte_ListaArticulo Reporte = new Reportes.frmReporte_ListaArticulo();
+            Reporte.ShowDialog();
+        }
     }
 }

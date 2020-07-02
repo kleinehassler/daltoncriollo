@@ -396,6 +396,7 @@
             this.cmdPrint.TabIndex = 6;
             this.cmdPrint.Text = "Imprimir";
             this.cmdPrint.UseVisualStyleBackColor = false;
+            this.cmdPrint.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
             // cmdClose
             // 

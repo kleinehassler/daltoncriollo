@@ -109,7 +109,7 @@ namespace CapaDatos
 
 
 
-        public string Insertar(E_Sujeto Obj)
+        public string Insertar(E_Sujetos Obj)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -119,12 +119,15 @@ namespace CapaDatos
                 SqlCommand Comando = new SqlCommand("spSujeto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@ope", SqlDbType.Int).Value = 1;
-                Comando.Parameters.Add("@iart", SqlDbType.Int).Value = Obj.idearticulo;
-                Comando.Parameters.Add("@iname", SqlDbType.VarChar).Value = Obj.nombreart;
-                Comando.Parameters.Add("@icode", SqlDbType.VarChar).Value = Obj.codigoart;
-                Comando.Parameters.Add("@iprecio", SqlDbType.Decimal).Value = Obj.precioart;
-                Comando.Parameters.Add("@istock", SqlDbType.Decimal).Value = Obj.stock;
-                Comando.Parameters.Add("@iuni", SqlDbType.VarChar).Value = Obj.unidad;
+                Comando.Parameters.Add("@side", SqlDbType.Int).Value = Obj.idesujeto;
+                Comando.Parameters.Add("@sname", SqlDbType.VarChar).Value = Obj.nombresujeto;
+                Comando.Parameters.Add("@sruc", SqlDbType.VarChar).Value = Obj.idetributario;
+                Comando.Parameters.Add("@sdireccion", SqlDbType.VarChar).Value = Obj.direccionsuje;
+                Comando.Parameters.Add("@stelefono", SqlDbType.VarChar).Value = Obj.telefonosuje;
+                Comando.Parameters.Add("@semail", SqlDbType.VarChar).Value = Obj.emailsuje;
+                Comando.Parameters.Add("@scliente", SqlDbType.Int).Value = Obj.cliente;
+                Comando.Parameters.Add("@sproveedor", SqlDbType.Int).Value = Obj.proveedor;
+                
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se INSERTO Registro";
 
@@ -143,7 +146,7 @@ namespace CapaDatos
 
 
 
-        public string Actualizar(E_Sujeto Obj)
+        public string Actualizar(E_Sujetos Obj)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -153,12 +156,14 @@ namespace CapaDatos
                 SqlCommand Comando = new SqlCommand("spSujeto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@ope", SqlDbType.Int).Value = 2;
-                Comando.Parameters.Add("@iart", SqlDbType.Int).Value = Obj.idearticulo;
-                Comando.Parameters.Add("@iname", SqlDbType.VarChar).Value = Obj.nombreart;
-                Comando.Parameters.Add("@icode", SqlDbType.VarChar).Value = Obj.codigoart;
-                Comando.Parameters.Add("@iprecio", SqlDbType.Decimal).Value = Obj.precioart;
-                Comando.Parameters.Add("@istock", SqlDbType.Decimal).Value = Obj.stock;
-                Comando.Parameters.Add("@iuni", SqlDbType.VarChar).Value = Obj.unidad;
+                Comando.Parameters.Add("@side", SqlDbType.Int).Value = Obj.idesujeto;
+                Comando.Parameters.Add("@sname", SqlDbType.VarChar).Value = Obj.nombresujeto;
+                Comando.Parameters.Add("@sruc", SqlDbType.VarChar).Value = Obj.idetributario;
+                Comando.Parameters.Add("@sdireccion", SqlDbType.VarChar).Value = Obj.direccionsuje;
+                Comando.Parameters.Add("@stelefono", SqlDbType.VarChar).Value = Obj.telefonosuje;
+                Comando.Parameters.Add("@semail", SqlDbType.VarChar).Value = Obj.emailsuje;
+                Comando.Parameters.Add("@scliente", SqlDbType.Int).Value = Obj.cliente;
+                Comando.Parameters.Add("@sproveedor", SqlDbType.Int).Value = Obj.proveedor; 
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ACTUALIZO Registro";
 
@@ -177,7 +182,7 @@ namespace CapaDatos
 
 
 
-        public string Eliminar(E_Sujeto Obj)
+        public string Eliminar(E_Sujetos Obj)
         {
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -187,12 +192,14 @@ namespace CapaDatos
                 SqlCommand Comando = new SqlCommand("spSujeto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@ope", SqlDbType.Int).Value = 3;
-                Comando.Parameters.Add("@iart", SqlDbType.Int).Value = Obj.idearticulo;
-                Comando.Parameters.Add("@iname", SqlDbType.VarChar).Value = Obj.nombreart;
-                Comando.Parameters.Add("@icode", SqlDbType.VarChar).Value = Obj.codigoart;
-                Comando.Parameters.Add("@iprecio", SqlDbType.Decimal).Value = Obj.precioart;
-                Comando.Parameters.Add("@istock", SqlDbType.Decimal).Value = Obj.stock;
-                Comando.Parameters.Add("@iuni", SqlDbType.VarChar).Value = Obj.unidad;
+                Comando.Parameters.Add("@side", SqlDbType.Int).Value = Obj.idesujeto;
+                Comando.Parameters.Add("@sname", SqlDbType.VarChar).Value = Obj.nombresujeto;
+                Comando.Parameters.Add("@sruc", SqlDbType.VarChar).Value = Obj.idetributario;
+                Comando.Parameters.Add("@sdireccion", SqlDbType.VarChar).Value = Obj.direccionsuje;
+                Comando.Parameters.Add("@stelefono", SqlDbType.VarChar).Value = Obj.telefonosuje;
+                Comando.Parameters.Add("@semail", SqlDbType.VarChar).Value = Obj.emailsuje;
+                Comando.Parameters.Add("@scliente", SqlDbType.Int).Value = Obj.cliente;
+                Comando.Parameters.Add("@sproveedor", SqlDbType.Int).Value = Obj.proveedor; 
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ELIMINO Registro";
 
