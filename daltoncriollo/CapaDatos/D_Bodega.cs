@@ -42,15 +42,13 @@ namespace CapaDatos
 
         }
 
-        public DataTable Buscar()
+        public DataTable Buscar(string Valor)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
             try
             {
-                
-
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("spBuscarBodega", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
@@ -72,6 +70,38 @@ namespace CapaDatos
             }
 
 
+        }
+
+        public string Existe(string Valor)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spBodegaExiste", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@valor", SqlDbType.Int).Value = Valor;
+                SqlParameter ParExiste = new SqlParameter();
+                ParExiste.ParameterName = "@existe";
+                ParExiste.SqlDbType = SqlDbType.Int;
+                ParExiste.Direction = ParameterDirection.Output;
+                Comando.Parameters.Add(ParExiste);
+                SqlCon.Open();
+                Comando.ExecuteNonQuery();
+                Rpta = Convert.ToString(ParExiste.Value);
+
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
         }
 
         public string Insertar(E_Bodega Obj)

@@ -30,7 +30,7 @@ namespace CapaNegocios
         public static string Insertar(string nombrebodega, string direccion, int responsable)
         {
            D_Bodega Datos = new D_Bodega();
-           
+
            string Existe = Datos.Existe(nombrebodega);
            if (Existe.Equals("1"))
            {
@@ -69,6 +69,7 @@ namespace CapaNegocios
 
         public static string Eliminar(int idebodega, string nombrebodega, string direccion, int responsable)
         {
+            D_Bodega Datos = new D_Bodega();
             E_Bodega Obj = new E_Bodega();
             Obj.idebodega = idebodega;
             Obj.nombrebodega = nombrebodega;

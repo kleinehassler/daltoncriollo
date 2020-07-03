@@ -224,7 +224,7 @@ namespace CapaPresentacion
                         int Codigo;
                         String Rpta = "";
                         Codigo = Convert.ToInt32(txtIdeArticulo.Text);
-                        Rpta = N_Articulo.Elliminar(Codigo, " ", " ", 0, 0, 0, " ");
+                        Rpta = N_Articulo.Eliminar(Codigo, " ", " ", 0, 0, 0, " ");
 
                         if (Rpta.Equals("OK"))
                         {

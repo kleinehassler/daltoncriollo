@@ -59,7 +59,7 @@ namespace CapaPresentacion
             txtCodigo.Clear();
             txtNombre.Clear();
             txtDireccion.Clear();
-            cboResponsable.Clear();
+            //cboResponsable.Clear();
             ErrorIcono.Clear();
 
         }
@@ -118,7 +118,7 @@ namespace CapaPresentacion
                         int Codigo;
                         String Rpta = "";
                         Codigo = Convert.ToInt32(txtCodigo.Text);
-                        Rpta = N_Bodega.Elliminar(Codigo, " ", " ", 0);
+                        Rpta = N_Bodega.Eliminar(Codigo, " ", " ", 0);
 
                         if (Rpta.Equals("OK"))
                         {
@@ -185,7 +185,7 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        Rpta = N_Articulo.Insertar(txtNombre.Text.Trim(), txtDireccion.Text.Trim(), cboResponsable.Text);
+                        Rpta = N_Bodega.Insertar(txtNombre.Text.Trim(), txtDireccion.Text.Trim(), Convert.ToInt32(cboResponsable.Text));
                         if (Rpta.Equals("OK"))
                         {
                             this.MensajeOk("Se Registro un Nueva Bodega");
@@ -223,7 +223,7 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        Rpta = N_Articulo.Actualizar(Convert.ToInt32(txtCodigo.Text), txtNombre.Text.Trim(), Convert.ToInt32(cboResponsable.Text));
+                        Rpta = N_Bodega.Actualizar(Convert.ToInt32(txtCodigo.Text), txtNombre.Text.Trim(), txtDireccion.Text.Trim(), Convert.ToInt32(cboResponsable.Text) );
                         if (Rpta.Equals("OK"))
                         {
                             this.MensajeOk("Se Actaulizo los Datos de la Bodega");
