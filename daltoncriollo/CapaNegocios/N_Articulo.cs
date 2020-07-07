@@ -12,6 +12,7 @@ namespace CapaNegocios
 {
     public class N_Articulo
     {
+
         public static DataTable Listar()
         {
             D_Articulo Datos = new D_Articulo();
@@ -25,7 +26,6 @@ namespace CapaNegocios
             return Datos.Buscar(Valor);
 
         }
-
 
         public static string Insertar(string nombreart, string codigoart, decimal precioart, int tipoart, decimal stock, string unidad)
         {

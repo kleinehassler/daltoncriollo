@@ -42,7 +42,6 @@ namespace CapaDatos
 
         }
 
-
         public DataTable Buscar(string Valor)
         {
             SqlDataReader Resultado;
@@ -71,9 +70,7 @@ namespace CapaDatos
             }
 
         }
-
-
-
+        
         public string Existe(string Valor)
         {
             string Rpta = "";
@@ -105,9 +102,6 @@ namespace CapaDatos
             }
             return Rpta;
         }
-
-
-
 
         public string Insertar(E_Sujetos Obj)
         {
@@ -144,8 +138,6 @@ namespace CapaDatos
             return Rpta;
         }
 
-
-
         public string Actualizar(E_Sujetos Obj)
         {
             string Rpta = "";
@@ -179,8 +171,6 @@ namespace CapaDatos
             }
             return Rpta;
         }
-
-
 
         public string Eliminar(E_Sujetos Obj)
         {

@@ -97,10 +97,28 @@ namespace CapaPresentacion
             tabControl1.SelectedIndex = 1;
             this.Limpiar();
         }
+        private void CargasrResponsable()
+        {
+            try
+            {
+                cboResponsable.DataSource = N_Bodega.Seleccionar();
+                cboResponsable.ValueMember = "idResponsable";
+                cboResponsable.DisplayMember = "NombreResponsable";
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+        }
+
 
         private void P_Bodega_Load(object sender, EventArgs e)
         {
             this.Listar();
+            this.CargasrResponsable();
+
         }
 
         private void cmdDelete_Click(object sender, EventArgs e)

@@ -12,6 +12,7 @@ namespace CapaNegocios
 {
     public class N_Bodega 
     {
+
         public static DataTable Listar()
         {
             D_Bodega Datos = new D_Bodega();
@@ -26,6 +27,12 @@ namespace CapaNegocios
 
         }
 
+        public static DataTable Seleccionar()
+        {
+            D_Bodega Datos = new D_Bodega();
+            return Datos.Seleccionar();
+
+        }
 
         public static string Insertar(string nombrebodega, string direccion, int responsable)
         {
