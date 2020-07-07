@@ -113,6 +113,9 @@ namespace CapaPresentacion
 
         private void sujetosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            P_Sujetos frm = new P_Sujetos();
+            frm.MdiParent = this;
+            frm.Show();
 
         }
 
@@ -127,6 +130,20 @@ namespace CapaPresentacion
         private void produccionToolStripMenuItem2_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void bodegasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            P_Bodega frm = new P_Bodega();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void produccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            P_Produccion frm = new P_Produccion();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
