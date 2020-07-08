@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSistema.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     <Compile Include="Reportes\frm_rptListaBodega.Designer.cs">
       <DependentUpon>frm_rptListaBodega.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frm_rptListaSujetos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frm_rptListaSujetos.Designer.cs">
+      <DependentUpon>frm_rptListaSujetos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frm_rptListoDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,12 +156,9 @@
     <Compile Include="Reportes\frm_rpt_ListaUsuarios.Designer.cs">
       <DependentUpon>frm_rpt_ListaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Rpt_Form_ListaSujetos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\Rpt_Form_ListaSujetos.Designer.cs">
-      <DependentUpon>Rpt_Form_ListaSujetos.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSistema.resx">
       <DependentUpon>frmSistema.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +198,9 @@
     <EmbeddedResource Include="Reportes\frm_rptListaBodega.resx">
       <DependentUpon>frm_rptListaBodega.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_rptListaSujetos.resx">
+      <DependentUpon>frm_rptListaSujetos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frm_rptListoDocumentos.resx">
       <DependentUpon>frm_rptListoDocumentos.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,9 +211,6 @@
     <EmbeddedResource Include="Reportes\rptListaUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaSujeto.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaArticulos.rdlc" />
-    <EmbeddedResource Include="Reportes\Rpt_Form_ListaSujetos.resx">
-      <DependentUpon>Rpt_Form_ListaSujetos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Rpt_ListaBodegas.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

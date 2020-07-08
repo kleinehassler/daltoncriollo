@@ -108,7 +108,8 @@ namespace CapaPresentacion
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            P_Usuarios frm = new P_Usuarios();
+            frm.Show();
         }
 
         private void sujetosToolStripMenuItem_Click(object sender, EventArgs e)

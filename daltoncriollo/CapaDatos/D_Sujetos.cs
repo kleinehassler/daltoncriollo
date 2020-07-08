@@ -113,15 +113,14 @@ namespace CapaDatos
                 SqlCommand Comando = new SqlCommand("spSujeto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@ope", SqlDbType.Int).Value = 1;
-                Comando.Parameters.Add("@side", SqlDbType.Int).Value = Obj.idesujeto;
+                Comando.Parameters.Add("@idSuj", SqlDbType.Int).Value = Obj.idesujeto;
                 Comando.Parameters.Add("@sname", SqlDbType.VarChar).Value = Obj.nombresujeto;
                 Comando.Parameters.Add("@sruc", SqlDbType.VarChar).Value = Obj.idetributario;
-                Comando.Parameters.Add("@sdireccion", SqlDbType.VarChar).Value = Obj.direccionsuje;
-                Comando.Parameters.Add("@stelefono", SqlDbType.VarChar).Value = Obj.telefonosuje;
+                Comando.Parameters.Add("@sdir", SqlDbType.VarChar).Value = Obj.direccionsuje;
+                Comando.Parameters.Add("@stel", SqlDbType.VarChar).Value = Obj.telefonosuje;
                 Comando.Parameters.Add("@semail", SqlDbType.VarChar).Value = Obj.emailsuje;
-                Comando.Parameters.Add("@scliente", SqlDbType.Int).Value = Obj.cliente;
-                Comando.Parameters.Add("@sproveedor", SqlDbType.Int).Value = Obj.proveedor;
-                
+                Comando.Parameters.Add("@siscliente", SqlDbType.Int).Value = Obj.cliente;
+                Comando.Parameters.Add("@sisproveedor", SqlDbType.Int).Value = Obj.proveedor;
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se INSERTO Registro";
 
@@ -148,14 +147,14 @@ namespace CapaDatos
                 SqlCommand Comando = new SqlCommand("spSujeto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@ope", SqlDbType.Int).Value = 2;
-                Comando.Parameters.Add("@side", SqlDbType.Int).Value = Obj.idesujeto;
+                Comando.Parameters.Add("@idSuj", SqlDbType.Int).Value = Obj.idesujeto;
                 Comando.Parameters.Add("@sname", SqlDbType.VarChar).Value = Obj.nombresujeto;
                 Comando.Parameters.Add("@sruc", SqlDbType.VarChar).Value = Obj.idetributario;
-                Comando.Parameters.Add("@sdireccion", SqlDbType.VarChar).Value = Obj.direccionsuje;
-                Comando.Parameters.Add("@stelefono", SqlDbType.VarChar).Value = Obj.telefonosuje;
+                Comando.Parameters.Add("@sdir", SqlDbType.VarChar).Value = Obj.direccionsuje;
+                Comando.Parameters.Add("@stel", SqlDbType.VarChar).Value = Obj.telefonosuje;
                 Comando.Parameters.Add("@semail", SqlDbType.VarChar).Value = Obj.emailsuje;
-                Comando.Parameters.Add("@scliente", SqlDbType.Int).Value = Obj.cliente;
-                Comando.Parameters.Add("@sproveedor", SqlDbType.Int).Value = Obj.proveedor; 
+                Comando.Parameters.Add("@siscliente", SqlDbType.Int).Value = Obj.cliente;
+                Comando.Parameters.Add("@sisproveedor", SqlDbType.Int).Value = Obj.proveedor; 
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ACTUALIZO Registro";
 
@@ -182,14 +181,14 @@ namespace CapaDatos
                 SqlCommand Comando = new SqlCommand("spSujeto", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@ope", SqlDbType.Int).Value = 3;
-                Comando.Parameters.Add("@side", SqlDbType.Int).Value = Obj.idesujeto;
+                Comando.Parameters.Add("@idSuj", SqlDbType.Int).Value = Obj.idesujeto;
                 Comando.Parameters.Add("@sname", SqlDbType.VarChar).Value = Obj.nombresujeto;
                 Comando.Parameters.Add("@sruc", SqlDbType.VarChar).Value = Obj.idetributario;
-                Comando.Parameters.Add("@sdireccion", SqlDbType.VarChar).Value = Obj.direccionsuje;
-                Comando.Parameters.Add("@stelefono", SqlDbType.VarChar).Value = Obj.telefonosuje;
+                Comando.Parameters.Add("@sdir", SqlDbType.VarChar).Value = Obj.direccionsuje;
+                Comando.Parameters.Add("@stel", SqlDbType.VarChar).Value = Obj.telefonosuje;
                 Comando.Parameters.Add("@semail", SqlDbType.VarChar).Value = Obj.emailsuje;
-                Comando.Parameters.Add("@scliente", SqlDbType.Int).Value = Obj.cliente;
-                Comando.Parameters.Add("@sproveedor", SqlDbType.Int).Value = Obj.proveedor; 
+                Comando.Parameters.Add("@siscliente", SqlDbType.Int).Value = Obj.cliente;
+                Comando.Parameters.Add("@sisproveedor", SqlDbType.Int).Value = Obj.proveedor;
                 SqlCon.Open();
                 Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ELIMINO Registro";
 

@@ -17,6 +17,11 @@ namespace CapaPresentacion
     public partial class P_Bodega : Form
     {
 
+        public P_Bodega()
+        {
+            InitializeComponent();
+        }
+
         private void Listar()
         {
             try
@@ -43,14 +48,13 @@ namespace CapaPresentacion
             }
         }
 
-
-
+        
         private void formato()
         {
             dataGridView1.Columns[0].Width = 150;
             dataGridView1.Columns[1].Width = 200;
             dataGridView1.Columns[2].Width = 100;
-            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
         }
 
 
@@ -78,12 +82,6 @@ namespace CapaPresentacion
 
 
 
-
-        public P_Bodega()
-        {
-            InitializeComponent();
-        }
-
         private void cmdPrint_Click(object sender, EventArgs e)
         {
             Reportes.frm_rptListaBodega Reporte = new Reportes.frm_rptListaBodega();
@@ -97,6 +95,7 @@ namespace CapaPresentacion
             tabControl1.SelectedIndex = 1;
             this.Limpiar();
         }
+
         private void CargasrResponsable()
         {
             try
@@ -203,7 +202,7 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        Rpta = N_Bodega.Insertar(txtNombre.Text.Trim(), txtDireccion.Text.Trim(), Convert.ToInt32(cboResponsable.Text));
+                        Rpta = N_Bodega.Insertar(txtNombre.Text.Trim(), txtDireccion.Text.Trim(), Convert.ToInt32(cboResponsable.SelectedValue));
                         if (Rpta.Equals("OK"))
                         {
                             this.MensajeOk("Se Registro un Nueva Bodega");
@@ -241,7 +240,7 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        Rpta = N_Bodega.Actualizar(Convert.ToInt32(txtCodigo.Text), txtNombre.Text.Trim(), txtDireccion.Text.Trim(), Convert.ToInt32(cboResponsable.Text) );
+                        Rpta = N_Bodega.Actualizar(Convert.ToInt32(txtCodigo.Text), txtNombre.Text.Trim(), txtDireccion.Text.Trim(), Convert.ToInt32(cboResponsable.SelectedValue) );
                         if (Rpta.Equals("OK"))
                         {
                             this.MensajeOk("Se Actaulizo los Datos de la Bodega");
@@ -263,6 +262,21 @@ namespace CapaPresentacion
                 }
             }
 
+        }
+
+        private void cboResponsable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Buscar();
         }
     }
 }

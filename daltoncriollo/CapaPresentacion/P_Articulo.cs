@@ -287,5 +287,10 @@ namespace CapaPresentacion
             Reportes.frmReporte_ListaArticulo Reporte = new Reportes.frmReporte_ListaArticulo();
             Reporte.ShowDialog();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,6 +27,14 @@ namespace CapaNegocios
 
         }
 
+
+        public static DataTable Seleccionar()
+        {
+            D_Usuarios Datos = new D_Usuarios();
+            return Datos.Seleccionar();
+
+        }
+
         public static string Insertar(string nombreusu, string loginusu, string paswoordusu, string emailusu, int activo, int tiporol)
         {
             D_Usuarios Datos = new D_Usuarios();

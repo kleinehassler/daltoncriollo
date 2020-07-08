@@ -26,8 +26,7 @@ namespace CapaNegocios
 
         }
 
-
-        public static string Insertar(string nombresujeto, string idetributario, string direccionsuje, string telefonosuje, string emailsuje, int cliente, int proveedor )
+        public static string Insertar(string nombresujeto, string idetributario, string direccionsuje, string telefonosuje, string emailsuje, int cliente, int proveedor)
         {
             D_Sujetos Datos = new D_Sujetos();
 
