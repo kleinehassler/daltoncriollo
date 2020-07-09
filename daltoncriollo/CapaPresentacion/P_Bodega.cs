@@ -47,8 +47,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
-        
+                
         private void formato()
         {
             dataGridView1.Columns[0].Width = 150;
@@ -56,8 +55,7 @@ namespace CapaPresentacion
             dataGridView1.Columns[2].Width = 100;
             dataGridView1.Columns[3].Visible = false;
         }
-
-
+        
         private void Limpiar()
         {
             txtCodigo.Clear();
@@ -67,20 +65,16 @@ namespace CapaPresentacion
             ErrorIcono.Clear();
 
         }
-
-
+        
         private void MensajeError(string Mensaje)
         {
             MessageBox.Show(Mensaje, "D Criollo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-
+        
         private void MensajeOk(string Mensaje)
         {
             MessageBox.Show(Mensaje, "D Criollo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-
 
         private void cmdPrint_Click(object sender, EventArgs e)
         {
@@ -111,8 +105,7 @@ namespace CapaPresentacion
 
             }
         }
-
-
+        
         private void P_Bodega_Load(object sender, EventArgs e)
         {
             this.Listar();

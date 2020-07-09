@@ -28,6 +28,20 @@ namespace CapaNegocios
 
         }
 
+        public static DataTable SeleccionarPT()
+        {
+            D_Produccion Datos = new D_Produccion();
+            return Datos.SeleccionarPT();
+
+        }
+
+        public static DataTable SeleccionarMP()
+        {
+            D_Produccion Datos = new D_Produccion();
+            return Datos.SeleccionarMP();
+
+        }
+
         public static string Insertar(int articuloprodu, int materiaprima, decimal cantidad, decimal factor, int qtyart)
         {
             D_Produccion Datos = new D_Produccion();

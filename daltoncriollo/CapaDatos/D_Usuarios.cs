@@ -74,6 +74,38 @@ namespace CapaDatos
         }
 
 
+        public DataTable Login(string Login, string Clave)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spUsuario_Login", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@login", SqlDbType.VarChar).Value = Login;
+                Comando.Parameters.Add("@clave", SqlDbType.VarChar).Value = Clave;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
+
         public DataTable Seleccionar()
         {
             SqlDataReader Resultado;

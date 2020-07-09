@@ -28,6 +28,14 @@ namespace CapaNegocios
         }
 
 
+        public static DataTable Login(string Login, string Clave)
+        {
+            D_Usuarios Datos = new D_Usuarios();
+            return Datos.Login(Login, Clave);
+
+        }
+
+
         public static DataTable Seleccionar()
         {
             D_Usuarios Datos = new D_Usuarios();

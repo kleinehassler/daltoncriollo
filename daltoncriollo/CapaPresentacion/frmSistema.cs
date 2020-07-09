@@ -15,6 +15,12 @@ namespace CapaPresentacion
     public partial class frmSistema : Form
     {
         private int childFormNumber = 0;
+        public int idUsuario;
+        public int idRol;
+        public string NombreUsr;
+        public string LoginUsr;
+        public string RolNombre;
+        public bool EstadoUsr;
 
         public frmSistema()
         {
@@ -145,6 +151,129 @@ namespace CapaPresentacion
             P_Produccion frm = new P_Produccion();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void frmSistema_Load(object sender, EventArgs e)
+        {
+            stbInferior.Text = "Desarrollado por Dalton Criollo :: Inst. Bolivar Madero Vargas :: Usuario Actual --> " + this.NombreUsr;
+
+            if (this.idRol.Equals(1))
+            {
+                mnuDatos.Enabled = true;
+                mnuDArticulos1.Enabled = true;
+                mnuDBodegas1.Enabled = true;
+                mnuDProduccion1.Enabled = true;
+                mnuDSujetos1.Enabled = true;
+
+                mnuMovimientos.Enabled = true;
+                mnuMIngresos1.Enabled = true;
+                mnuMEgresos1.Enabled = true;
+                mnuMFacturacion1.Enabled = true;
+                mnuMProduccion1.Enabled = true;
+
+                mnuResumenes.Enabled = true;
+                mnuRIngresos1.Enabled = true;
+                mnuREgresos.Enabled = true;
+                mnuRProduccion1.Enabled = true;
+                mnuRKardex1.Enabled = true;
+
+                mnuUsuarios.Enabled = true;
+                mnuUUsuarios1.Enabled = true;
+                mnuUCClave.Enabled = true;
+
+            }
+            else if (this.idRol.Equals(2))
+            {
+                mnuDatos.Enabled = true;
+                mnuDArticulos1.Enabled = true;
+                mnuDBodegas1.Enabled = false;
+                mnuDProduccion1.Enabled = true;
+                mnuDSujetos1.Enabled = true;
+
+                mnuMovimientos.Enabled = true;
+                mnuMIngresos1.Enabled = true;
+                mnuMEgresos1.Enabled = true;
+                mnuMFacturacion1.Enabled = false;
+                mnuMProduccion1.Enabled = true;
+
+                mnuResumenes.Enabled = true;
+                mnuRIngresos1.Enabled = true;
+                mnuREgresos.Enabled = true;
+                mnuRProduccion1.Enabled = true;
+                mnuRKardex1.Enabled = true;
+
+                mnuUsuarios.Enabled = true;
+                mnuUUsuarios1.Enabled = false;
+                mnuUCClave.Enabled = true;
+
+            }
+            else if (this.idRol.Equals(3))
+            {
+                mnuDatos.Enabled = true;
+                mnuDArticulos1.Enabled = false;
+                mnuDBodegas1.Enabled = false;
+                mnuDProduccion1.Enabled = false;
+                mnuDSujetos1.Enabled = true;
+
+                mnuMovimientos.Enabled = true;
+                mnuMIngresos1.Enabled = false;
+                mnuMEgresos1.Enabled = false;
+                mnuMFacturacion1.Enabled = true;
+                mnuMProduccion1.Enabled = false;
+
+                mnuResumenes.Enabled = false;
+                mnuRIngresos1.Enabled = false;
+                mnuREgresos.Enabled = false;
+                mnuRProduccion1.Enabled = false;
+                mnuRKardex1.Enabled = false;
+
+                mnuUsuarios.Enabled = true;
+                mnuUUsuarios1.Enabled = false;
+                mnuUCClave.Enabled = true;
+
+            }
+            else
+            {
+                mnuDatos.Enabled = false;
+                mnuDArticulos1.Enabled = false;
+                mnuDBodegas1.Enabled = false;
+                mnuDProduccion1.Enabled = false;
+                mnuDSujetos1.Enabled = false;
+
+                mnuMovimientos.Enabled = false;
+                mnuMIngresos1.Enabled = false;
+                mnuMEgresos1.Enabled = false;
+                mnuMFacturacion1.Enabled = false;
+                mnuMProduccion1.Enabled = false;
+
+                mnuResumenes.Enabled = false;
+                mnuRIngresos1.Enabled = false;
+                mnuREgresos.Enabled = false;
+                mnuRProduccion1.Enabled = false;
+                mnuRKardex1.Enabled = false;
+
+                mnuUsuarios.Enabled = false;
+                mnuUUsuarios1.Enabled = false;
+                mnuUCClave.Enabled = false;
+
+            }
+
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult Opcion;
+            Opcion = MessageBox.Show("Desea Salir del Sistema", "Dalton Criollo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (Opcion == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void frmSistema_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
