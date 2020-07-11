@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using System.Data;
 
 namespace CapaEntidad
@@ -20,7 +21,9 @@ namespace CapaEntidad
         public decimal iva { get; set; }
         public decimal total { get; set; }
         public int bodega { get; set; }
-
+        public int vendedor { get; set; }
+        public int estado { get; set; }
+        public DataTable Detalle { get; set; }
         
     }
 }

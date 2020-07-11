@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="E_Articulo.cs" />
     <Compile Include="E_Bodega.cs" />
+    <Compile Include="E_Egreso.cs" />
+    <Compile Include="E_Factura.cs" />
     <Compile Include="E_Ingreso.cs" />
     <Compile Include="E_Produccion.cs" />
     <Compile Include="E_Sujetos.cs" />
