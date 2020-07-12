@@ -45,6 +45,7 @@ namespace CapaPresentacion
                     else
                     {
                         frmSistema Frm = new frmSistema();
+                        Variables.idUsuarios = Convert.ToInt32(Tabla.Rows[0][5]);
                         Frm.idUsuario=Convert.ToInt32(Tabla.Rows[0][5]);
                         Frm.idRol=Convert.ToInt32(Tabla.Rows[0][7]);
                         Frm.NombreUsr=Convert.ToString(Tabla.Rows[0][1]);

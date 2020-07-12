@@ -107,6 +107,7 @@ namespace CapaDatos
         public string Anular(int idFactura)
         {
             string Rpta = "";
+            
             SqlConnection SqlCon = new SqlConnection();
             try
             {
@@ -115,13 +116,20 @@ namespace CapaDatos
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@idFactura", SqlDbType.Int).Value = idFactura;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ANULO la Factura";
-
+                Comando.ExecuteNonQuery();
+                Rpta="OK";
+                
             }
             catch (Exception ex)
             {
                 Rpta = ex.Message;
+                
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
         }
 
 

@@ -72,6 +72,93 @@ namespace CapaDatos
             }
 
         }
+
+
+        public DataTable ListarDetalle(int IdDocumento)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("ingreso_listar_detalle", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@idingreso", SqlDbType.Int).Value = IdDocumento;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+        
+        public DataTable SeleccionarBodega()
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spBodega_Seleccionar", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
+        public DataTable SeleccionarDocumento()
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spDocumentos_Seleccionar", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
         
         public string Insertar(E_Ingreso Obj)
         {
@@ -92,7 +179,8 @@ namespace CapaDatos
                 Comando.Parameters.Add("@bodega", SqlDbType.Int).Value = Obj.bodega;
                 Comando.Parameters.Add("@detalle", SqlDbType.Structured).Value = Obj.Detalle;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se INSERTO Registro";
+                Comando.ExecuteNonQuery();
+                Rpta = "OK";
 
             }
             catch (Exception ex)
@@ -118,13 +206,19 @@ namespace CapaDatos
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@idIngreso", SqlDbType.Int).Value = idIngreso;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ANULO el Comprobante de Ingreso";
-
+                Comando.ExecuteNonQuery();
+                Rpta="OK";
+                
             }
             catch (Exception ex)
             {
                 Rpta = ex.Message;
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
         }
 
     }

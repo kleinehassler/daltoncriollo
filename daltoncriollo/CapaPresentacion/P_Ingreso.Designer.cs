@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ErrorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNew = new System.Windows.Forms.Button();
             this.cmdClose = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboBodega = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -76,11 +76,11 @@
             this.cmdSave = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelArticulos = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtBuscarArticulo = new System.Windows.Forms.TextBox();
-            this.btnFiltrarArticulos = new System.Windows.Forms.Button();
-            this.btnCerrarArticulos = new System.Windows.Forms.Button();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.btnCerrarArticulos = new System.Windows.Forms.Button();
+            this.btnFiltrarArticulos = new System.Windows.Forms.Button();
+            this.txtBuscarArticulo = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -114,6 +114,7 @@
             this.btnNew.Tag = "0";
             this.btnNew.Text = "Nuevo";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // cmdClose
             // 
@@ -165,6 +166,7 @@
             this.cmdDelete.TabIndex = 12;
             this.cmdDelete.Text = "Anular";
             this.cmdDelete.UseVisualStyleBackColor = false;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
             // tabControl1
             // 
@@ -173,7 +175,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(755, 351);
+            this.tabControl1.Size = new System.Drawing.Size(791, 351);
             this.tabControl1.TabIndex = 10;
             // 
             // tabPage1
@@ -212,14 +214,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -228,35 +230,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(726, 276);
             this.dataGridView1.TabIndex = 2;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panelArticulos);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Font = new System.Drawing.Font("Miriam", 8.25F);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(747, 325);
+            this.tabPage2.Size = new System.Drawing.Size(783, 325);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Registro";
+            this.tabPage2.Text = "Transacciones";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -269,11 +272,11 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.dgvDetalle);
             this.groupBox2.Controls.Add(this.btnVerArticulos);
-            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtCodigoArt);
-            this.groupBox2.Location = new System.Drawing.Point(7, 92);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Location = new System.Drawing.Point(7, 91);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(734, 227);
+            this.groupBox2.Size = new System.Drawing.Size(734, 234);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle :: Ingreso";
@@ -372,10 +375,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panelArticulos);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.txtEstado);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cboBodega);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label11);
@@ -392,7 +394,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(735, 83);
+            this.groupBox1.Size = new System.Drawing.Size(735, 283);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Ingreso";
@@ -413,13 +415,13 @@
             this.txtEstado.Size = new System.Drawing.Size(100, 19);
             this.txtEstado.TabIndex = 15;
             // 
-            // comboBox1
+            // cboBodega
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(490, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 19);
-            this.comboBox1.TabIndex = 14;
+            this.cboBodega.FormattingEnabled = true;
+            this.cboBodega.Location = new System.Drawing.Point(490, 55);
+            this.cboBodega.Name = "cboBodega";
+            this.cboBodega.Size = new System.Drawing.Size(121, 19);
+            this.cboBodega.TabIndex = 14;
             // 
             // label6
             // 
@@ -481,7 +483,7 @@
             this.txtImpuesto.Name = "txtImpuesto";
             this.txtImpuesto.Size = new System.Drawing.Size(100, 19);
             this.txtImpuesto.TabIndex = 8;
-            this.txtImpuesto.Text = "12";
+            this.txtImpuesto.Text = "0.12";
             // 
             // txtNumComprobante
             // 
@@ -573,49 +575,10 @@
             this.panelArticulos.Controls.Add(this.btnFiltrarArticulos);
             this.panelArticulos.Controls.Add(this.txtBuscarArticulo);
             this.panelArticulos.Controls.Add(this.label13);
-            this.panelArticulos.Location = new System.Drawing.Point(29, 22);
+            this.panelArticulos.Location = new System.Drawing.Point(57, 59);
             this.panelArticulos.Name = "panelArticulos";
             this.panelArticulos.Size = new System.Drawing.Size(668, 206);
-            this.panelArticulos.TabIndex = 11;
-            this.panelArticulos.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(63, 12);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 11);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Buscar";
-            // 
-            // txtBuscarArticulo
-            // 
-            this.txtBuscarArticulo.Location = new System.Drawing.Point(106, 10);
-            this.txtBuscarArticulo.Name = "txtBuscarArticulo";
-            this.txtBuscarArticulo.Size = new System.Drawing.Size(267, 19);
-            this.txtBuscarArticulo.TabIndex = 1;
-            // 
-            // btnFiltrarArticulos
-            // 
-            this.btnFiltrarArticulos.Location = new System.Drawing.Point(390, 9);
-            this.btnFiltrarArticulos.Name = "btnFiltrarArticulos";
-            this.btnFiltrarArticulos.Size = new System.Drawing.Size(75, 23);
-            this.btnFiltrarArticulos.TabIndex = 2;
-            this.btnFiltrarArticulos.Text = "Buscar";
-            this.btnFiltrarArticulos.UseVisualStyleBackColor = true;
-            this.btnFiltrarArticulos.Click += new System.EventHandler(this.btnFiltrarArticulos_Click);
-            // 
-            // btnCerrarArticulos
-            // 
-            this.btnCerrarArticulos.Font = new System.Drawing.Font("Miriam", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnCerrarArticulos.ForeColor = System.Drawing.Color.Red;
-            this.btnCerrarArticulos.Location = new System.Drawing.Point(639, 6);
-            this.btnCerrarArticulos.Name = "btnCerrarArticulos";
-            this.btnCerrarArticulos.Size = new System.Drawing.Size(24, 23);
-            this.btnCerrarArticulos.TabIndex = 3;
-            this.btnCerrarArticulos.Text = "X";
-            this.btnCerrarArticulos.UseVisualStyleBackColor = true;
-            this.btnCerrarArticulos.Click += new System.EventHandler(this.btnCerrarArticulos_Click);
+            this.panelArticulos.TabIndex = 12;
             // 
             // dgvArticulos
             // 
@@ -629,20 +592,55 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(660, 150);
             this.dgvArticulos.TabIndex = 4;
-            this.dgvArticulos.DoubleClick += new System.EventHandler(this.dgvArticulos_DoubleClick);
+            // 
+            // btnCerrarArticulos
+            // 
+            this.btnCerrarArticulos.Font = new System.Drawing.Font("Miriam", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnCerrarArticulos.ForeColor = System.Drawing.Color.Red;
+            this.btnCerrarArticulos.Location = new System.Drawing.Point(639, 6);
+            this.btnCerrarArticulos.Name = "btnCerrarArticulos";
+            this.btnCerrarArticulos.Size = new System.Drawing.Size(24, 23);
+            this.btnCerrarArticulos.TabIndex = 3;
+            this.btnCerrarArticulos.Text = "X";
+            this.btnCerrarArticulos.UseVisualStyleBackColor = true;
+            // 
+            // btnFiltrarArticulos
+            // 
+            this.btnFiltrarArticulos.Location = new System.Drawing.Point(390, 9);
+            this.btnFiltrarArticulos.Name = "btnFiltrarArticulos";
+            this.btnFiltrarArticulos.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrarArticulos.TabIndex = 2;
+            this.btnFiltrarArticulos.Text = "Buscar";
+            this.btnFiltrarArticulos.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarArticulo
+            // 
+            this.txtBuscarArticulo.Location = new System.Drawing.Point(106, 10);
+            this.txtBuscarArticulo.Name = "txtBuscarArticulo";
+            this.txtBuscarArticulo.Size = new System.Drawing.Size(267, 19);
+            this.txtBuscarArticulo.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(63, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 11);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Buscar";
             // 
             // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 452);
+            this.ClientSize = new System.Drawing.Size(815, 452);
             this.Controls.Add(this.cmdSave);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.cmdClose);
             this.Controls.Add(this.cmdPrint);
             this.Controls.Add(this.cmdDelete);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.tabControl1);
             this.Name = "frmIngreso";
             this.Text = "Ingresos";
             this.Load += new System.EventHandler(this.frmIngreso_Load);
@@ -706,7 +704,7 @@
         private System.Windows.Forms.Button btnVerArticulos;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCodigoArt;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboBodega;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label12;

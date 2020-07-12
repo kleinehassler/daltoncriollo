@@ -3,3 +3,5 @@ C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Debug\CapaEntidad.pdb
 C:\daltoncriollo\daltoncriollo\CapaEntidad\obj\Debug\CapaEntidad.csprojResolveAssemblyReference.cache
 C:\daltoncriollo\daltoncriollo\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\daltoncriollo\daltoncriollo\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Debug\CapaEntidad.dll.CodeAnalysisLog.xml
+C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Debug\CapaEntidad.dll.lastcodeanalysissucceeded

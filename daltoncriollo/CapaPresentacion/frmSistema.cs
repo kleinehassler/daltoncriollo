@@ -275,5 +275,17 @@ namespace CapaPresentacion
         {
             Application.Exit();
         }
+
+        private void mnuMIngresos1_Click(object sender, EventArgs e)
+        {
+            frmIngreso frm = new frmIngreso();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuMEgresos1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

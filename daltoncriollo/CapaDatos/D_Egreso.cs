@@ -115,13 +115,19 @@ namespace CapaDatos
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@idEgreso", SqlDbType.Int).Value = idEgreso;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se ANULO el Comprobante de Egreso";
+                Comando.ExecuteNonQuery();
+                Rpta = "OK";
 
             }
             catch (Exception ex)
             {
                 Rpta = ex.Message;
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
         }
 
     }

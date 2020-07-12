@@ -89,7 +89,17 @@ namespace CapaPresentacion
 
         private void Limpiar()
         {
-            
+            txtIdeDocumento.Clear();
+            txtIdProveedor.Clear();
+            txtNombreProveedor.Clear();
+            txtSerie.Clear();
+            txtNumComprobante.Clear();
+            txtSubTotal.Text = "0.00";
+            txtIVA.Text = "0.00";
+            txtTotal.Text = "0.00";
+            txtImpuesto.Text = "0.12";
+            DtDetalle.Clear();
+
             //cboResponsable.Clear();
             ErrorIcono.Clear();
 
@@ -136,6 +146,8 @@ namespace CapaPresentacion
         {
 
             this.Listar();
+            this.CargarBodegas();
+            this.CargarDocumentos();
             this.CrearTabla();
 
 
@@ -156,7 +168,7 @@ namespace CapaPresentacion
                 if (e.KeyCode== Keys.Enter)
                 {
                     DataTable Tabla = new DataTable();
-                    Tabla = N_Articulo.BuscarCodigoArt(txtCodigoArt.Text.Trim();
+                    Tabla = N_Articulo.BuscarCodigoArt(txtCodigoArt.Text.Trim());
                     if (Tabla.Rows.Count<=0)
                     {
                         this.MensajeError("No Existe el Codigo de Barras del Articulo");
@@ -283,5 +295,81 @@ namespace CapaPresentacion
             this.CalcularTotal();
         }
 
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Rpta = "";
+                if (txtIdProveedor.Text == string.Empty || txtImpuesto.Text==string.Empty || txtNumComprobante.Text==string.Empty || DtDetalle.Rows.Count==0)
+                {
+                    this.MensajeError("Falta de Ingresar");
+                    ErrorIcono.SetError(txtIdProveedor, "Selecccione un Proveedor");
+                    ErrorIcono.SetError(txtImpuesto, "Ingrese un Impuesto");
+                    ErrorIcono.SetError(txtNumComprobante, "Ingrese un Numero de Comprobante");
+                    ErrorIcono.SetError(dgvDetalle, "Deve tener por lo Menos un Articulo");
+
+                }
+                else
+                {
+                    Rpta = N_Ingreso.Insertar(Convert.ToInt32(txtIdeDocumento.Text), Convert.ToInt32(cboComprobante.SelectedValue), "Ingreso", txtSerie.Text.Trim(), txtNumComprobante.Text.Trim(), Convert.ToInt32(txtIdProveedor.Text), Convert.ToDecimal(txtSubTotal.Text), Convert.ToDecimal(txtIVA.Text), Convert.ToDecimal(txtTotal.Text), Convert.ToInt32(cboBodega.SelectedValue), Variables.idUsuarios, 1, DtDetalle );
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Se Registro Transaccion de Ingreso");
+                        this.Limpiar();
+                        this.Listar();
+                        tabControl1.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+        }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CargarBodegas()
+        {
+            try
+            {
+                cboBodega.DataSource = N_Ingreso.SeleccionarBodega();
+                cboBodega.ValueMember = "idebodega";
+                cboBodega.DisplayMember = "nombrebodega";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+        }
+
+        private void CargarDocumentos()
+        {
+            try
+            {
+                cboComprobante.DataSource = N_Ingreso.SeleccionarDocumento();
+                cboComprobante.ValueMember = "id";
+                cboComprobante.DisplayMember = "nombre";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+        }
+        
+        
     }
 }

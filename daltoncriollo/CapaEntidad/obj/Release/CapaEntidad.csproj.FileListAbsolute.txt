@@ -2,3 +2,5 @@ C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Release\CapaEntidad.dll
 C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Release\CapaEntidad.pdb
 C:\daltoncriollo\daltoncriollo\CapaEntidad\obj\Release\CapaEntidad.dll
 C:\daltoncriollo\daltoncriollo\CapaEntidad\obj\Release\CapaEntidad.pdb
+C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Release\CapaEntidad.dll.CodeAnalysisLog.xml
+C:\daltoncriollo\daltoncriollo\CapaEntidad\bin\Release\CapaEntidad.dll.lastcodeanalysissucceeded

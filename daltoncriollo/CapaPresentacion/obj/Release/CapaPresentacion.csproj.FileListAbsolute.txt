@@ -17,3 +17,7 @@ C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\CapaPresentacion.Rep
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\CapaPresentacion.csproj.GenerateResource.Cache
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\RdlCompile.cache
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\RdlCompile.compiled
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\CapaPresentacion.frmLogin.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\CapaPresentacion.frmVista_Proveedor.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\CapaPresentacion.frmIngreso.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Release\CapaPresentacion.Reportes.frm_rptListaSujetos.resources

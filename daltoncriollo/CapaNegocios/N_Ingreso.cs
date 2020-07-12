@@ -28,6 +28,28 @@ namespace CapaNegocios
 
         }
 
+        public static DataTable ListarDetalle(int IdDocumento)
+        {
+            D_Ingreso Datos = new D_Ingreso();
+            return Datos.ListarDetalle(IdDocumento);
+
+        }
+
+        public static DataTable SeleccionarBodega()
+        {
+            D_Ingreso Datos = new D_Ingreso();
+            return Datos.SeleccionarBodega();
+
+        }
+
+        public static DataTable SeleccionarDocumento()
+        {
+            D_Ingreso Datos = new D_Ingreso();
+            return Datos.SeleccionarDocumento();
+
+        }
+
+
         public static string Insertar(int idedocumento, int tipodocumento, string nombredocu, string seriedocu, string numdocu, int sujeto, decimal subtotal, decimal iva, decimal total, int bodega, int vendedor, int estado, DataTable Detalles)
         {
             D_Ingreso Datos = new D_Ingreso();

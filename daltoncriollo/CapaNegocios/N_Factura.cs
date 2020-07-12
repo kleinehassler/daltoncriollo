@@ -51,7 +51,7 @@ namespace CapaNegocios
         public static string Anular(int IdFactura)
         {
             D_Factura Datos = new D_Factura();
-            return Datos.Anular(IFactura);
+            return Datos.Anular(IdFactura);
         }
 
 
