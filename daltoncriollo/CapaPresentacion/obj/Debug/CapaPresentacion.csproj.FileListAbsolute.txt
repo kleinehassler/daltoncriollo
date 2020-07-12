@@ -28,3 +28,5 @@ C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\RdlCompile.cache
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\RdlCompile.compiled
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.frm_rptListaSujetos.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmIngreso.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmVista_Proveedor.resources

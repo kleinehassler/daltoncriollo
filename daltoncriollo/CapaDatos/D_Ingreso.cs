@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Data;
-using System.Data.SqlClient;
 using CapaEntidad;
+using System.Configuration;
+
+using System.Data.SqlClient;
+using System.Data;
+
 
 namespace CapaDatos
 {
@@ -69,7 +72,7 @@ namespace CapaDatos
             }
 
         }
-
+        
         public string Insertar(E_Ingreso Obj)
         {
             string Rpta = "";

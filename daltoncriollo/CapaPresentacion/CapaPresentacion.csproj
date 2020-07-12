@@ -77,6 +77,12 @@
     <Compile Include="frmSistema.Designer.cs">
       <DependentUpon>frmSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVista_Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVista_Proveedor.Designer.cs">
+      <DependentUpon>frmVista_Proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="P_Bodega.Designer.cs">
       <DependentUpon>P_Bodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Ingreso.Designer.cs">
+      <DependentUpon>P_Ingreso.cs</DependentUpon>
     </Compile>
     <Compile Include="P_Produccion.cs">
       <SubType>Form</SubType>
@@ -156,11 +168,15 @@
     <Compile Include="Reportes\frm_rpt_ListaUsuarios.Designer.cs">
       <DependentUpon>frm_rpt_ListaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Variables.cs" />
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSistema.resx">
       <DependentUpon>frmSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVista_Proveedor.resx">
+      <DependentUpon>frmVista_Proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -182,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P_Bodega.resx">
       <DependentUpon>P_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Ingreso.resx">
+      <DependentUpon>P_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P_Produccion.resx">
       <DependentUpon>P_Produccion.cs</DependentUpon>

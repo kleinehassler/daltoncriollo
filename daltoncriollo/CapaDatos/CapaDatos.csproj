@@ -43,10 +43,12 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="D_Articulo.cs" />
     <Compile Include="D_Bodega.cs" />
+    <Compile Include="D_Clientes.cs" />
     <Compile Include="D_Egreso.cs" />
     <Compile Include="D_Factura.cs" />
     <Compile Include="D_Ingreso.cs" />
     <Compile Include="D_Produccion.cs" />
+    <Compile Include="D_Proveedores.cs" />
     <Compile Include="D_Sujetos.cs" />
     <Compile Include="D_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

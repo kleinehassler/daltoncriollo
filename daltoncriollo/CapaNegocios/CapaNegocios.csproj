@@ -41,9 +41,12 @@
   <ItemGroup>
     <Compile Include="N_Articulo.cs" />
     <Compile Include="N_Bodega.cs" />
+    <Compile Include="N_Clientes.cs" />
     <Compile Include="N_Egreso.cs" />
+    <Compile Include="N_Factura.cs" />
     <Compile Include="N_Ingreso.cs" />
     <Compile Include="N_Produccion.cs" />
+    <Compile Include="N_Proveedores.cs" />
     <Compile Include="N_Sujetos.cs" />
     <Compile Include="N_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
