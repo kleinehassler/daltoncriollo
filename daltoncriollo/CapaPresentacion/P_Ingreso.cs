@@ -49,9 +49,7 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
-
-
+        
         private void formato()
         {
             dataGridView1.Columns[0].Visible = false;
@@ -99,7 +97,9 @@ namespace CapaPresentacion
             txtTotal.Text = "0.00";
             txtImpuesto.Text = "0.12";
             DtDetalle.Clear();
-
+            dataGridView1.Columns[0].Visible = false;
+            cmdDelete.Enabled = false;
+            chkSeleccionar.Checked = false;
             //cboResponsable.Clear();
             ErrorIcono.Clear();
 
@@ -176,7 +176,7 @@ namespace CapaPresentacion
                     else
                     {
                         // Insertar al Detalle
-                        this.AgregarDetalle(Convert.ToInt32(Tabla.Rows[0][0]), Convert.ToString(Tabla.Rows[0][1]),Convert.ToString(Tabla.Rows[0][2]), Convert.ToDecimal(Tabla.Rows[0][4]));
+                        this.AgregarDetalle(Convert.ToInt32(Tabla.Rows[0][0]), Convert.ToString(Tabla.Rows[0][1]),Convert.ToString(Tabla.Rows[0][2]), Convert.ToDecimal(Tabla.Rows[0][3]));
                     }
 
                 }
@@ -230,13 +230,14 @@ namespace CapaPresentacion
 
                 foreach (DataRow FilaTemp in DtDetalle.Rows)
                 {
-                    Total = Total + Convert.ToDecimal(FilaTemp["imnporte"]);
+                    Total = Total + Convert.ToDecimal(FilaTemp["importe"]);
 
                 }
             }
-            SubTotal = Total / (1 + Convert.ToDecimal(txtImpuesto.Text));
+            SubTotal = (Total / (1 + Convert.ToDecimal(txtImpuesto.Text)));
             txtSubTotal.Text = SubTotal.ToString("#0.00#");
             txtIVA.Text = (Total - SubTotal).ToString("#0.00#");
+            txtTotal.Text = Total.ToString("#0.00#");
 
         }
 
@@ -269,15 +270,7 @@ namespace CapaPresentacion
 
         private void dgvArticulos_DoubleClick(object sender, EventArgs e)
         {
-            int IdArticulo;
-            string Codigo, Nombre;
-            decimal Precio;
-            IdArticulo = Convert.ToInt32(dgvArticulos.CurrentRow.Cells["idearticulo"].Value);
-            Codigo = Convert.ToString(dgvArticulos.CurrentRow.Cells["codigo"].Value);
-            Nombre = Convert.ToString(dgvArticulos.CurrentRow.Cells["articulo"].Value);
-            Precio = Convert.ToDecimal(dgvArticulos.CurrentRow.Cells["precio"].Value);
-            this.AgregarDetalle(IdArticulo, Codigo, Nombre, Precio);
-
+            
         }
 
         private void dgvDetalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -311,7 +304,8 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    Rpta = N_Ingreso.Insertar(Convert.ToInt32(txtIdeDocumento.Text), Convert.ToInt32(cboComprobante.SelectedValue), "Ingreso", txtSerie.Text.Trim(), txtNumComprobante.Text.Trim(), Convert.ToInt32(txtIdProveedor.Text), Convert.ToDecimal(txtSubTotal.Text), Convert.ToDecimal(txtIVA.Text), Convert.ToDecimal(txtTotal.Text), Convert.ToInt32(cboBodega.SelectedValue), Variables.idUsuarios, 1, DtDetalle );
+                    //Convert.ToInt32(txtIdeDocumento.Text),
+                    Rpta = N_Ingreso.Insertar( Convert.ToInt32(cboComprobante.SelectedValue), "Ingreso", txtSerie.Text.Trim(), txtNumComprobante.Text.Trim(), Convert.ToInt32(txtIdProveedor.Text), Convert.ToDecimal(txtSubTotal.Text), Convert.ToDecimal(txtIVA.Text), Convert.ToDecimal(txtTotal.Text), Convert.ToInt32(cboBodega.SelectedValue), Variables.idUsuarios, 1, DtDetalle );
                     if (Rpta.Equals("OK"))
                     {
                         this.MensajeOk("Se Registro Transaccion de Ingreso");
@@ -335,6 +329,42 @@ namespace CapaPresentacion
 
         private void cmdDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Esta Seguro de Anular Ingreso", "D Criollo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
+                {
+                    int Codigo;
+                    String Rpta = "";
+
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        {
+                            Codigo = Convert.ToInt32(row.Cells[1].Value);
+                            Rpta = N_Ingreso.Anular(Codigo);
+
+                            if (Rpta.Equals("OK"))
+                            {
+                                this.MensajeOk("Registro Anulado: " + Convert.ToString(row.Cells[6].Value) + "-" + Convert.ToString(row.Cells[7].Value) );
+                            }
+
+                            else
+                            {
+                                this.MensajeError(Rpta);
+                            }
+                        }
+                    }
+                }
+                this.Listar();
+                
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
 
         }
 
@@ -366,6 +396,87 @@ namespace CapaPresentacion
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+        }
+
+        private void btnCerrarArticulos_Click_1(object sender, EventArgs e)
+        {
+            panelArticulos.Visible = false;
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtBuscarArticulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFiltrarArticulos_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvArticulos.DataSource = N_Articulo.BuscarCodigoArt(txtBuscarArticulo.Text.Trim());
+                this.FormatoArticulos();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Buscar();
+        }
+
+        private void txtCodigoArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvArticulos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int IdArticulo;
+            string Codigo, Nombre;
+            decimal Precio;
+            IdArticulo = Convert.ToInt32(dgvArticulos.CurrentRow.Cells["idearticulo"].Value);
+            Codigo = Convert.ToString(dgvArticulos.CurrentRow.Cells["codigoart"].Value);
+            Nombre = Convert.ToString(dgvArticulos.CurrentRow.Cells["nombreart"].Value);
+            Precio = Convert.ToDecimal(dgvArticulos.CurrentRow.Cells["precioart"].Value);
+            this.AgregarDetalle(IdArticulo, Codigo, Nombre, Precio);
+
+
+
+        }
+
+        private void chkSeleccionar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSeleccionar.Checked)
+            {
+                dataGridView1.Columns[0].Visible = true;
+                cmdDelete.Enabled = true;
+
+            }
+            else
+            {
+                dataGridView1.Columns[0].Visible = false;
+                cmdDelete.Enabled = false;
+
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["Seleccionar"].Index)
+            {
+                DataGridViewCheckBoxCell chkEliminar = (DataGridViewCheckBoxCell)dataGridView1.Rows[e.RowIndex].Cells["Seleccionar"];
+                chkEliminar.Value = !Convert.ToBoolean(chkEliminar.Value);
 
             }
         }

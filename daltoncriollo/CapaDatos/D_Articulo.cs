@@ -83,7 +83,7 @@ namespace CapaDatos
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("articulo_buscar_codigoart", SqlCon);
+                SqlCommand Comando = new SqlCommand("articulo_buscar_codigo_pt", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
                 SqlCon.Open();
