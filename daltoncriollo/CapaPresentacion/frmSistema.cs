@@ -285,7 +285,18 @@ namespace CapaPresentacion
 
         private void mnuMEgresos1_Click(object sender, EventArgs e)
         {
-            
+            P_Egreso frm = new P_Egreso();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void mnuMFacturacion1_Click(object sender, EventArgs e)
+        {
+            P_Factura frm = new P_Factura();
+            frm.MdiParent = this;
+            frm.Show();
+
         }
     }
 }

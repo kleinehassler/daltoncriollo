@@ -35,10 +35,10 @@ namespace CapaNegocios
 
         }
 
-        public static DataTable ListarDetalle(int IdDocumento)
+        public static DataTable ListarDetalle(int idedetalle)
         {
             D_Ingreso Datos = new D_Ingreso();
-            return Datos.ListarDetalle(IdDocumento);
+            return Datos.ListarDetalle(idedetalle);
 
         }
 

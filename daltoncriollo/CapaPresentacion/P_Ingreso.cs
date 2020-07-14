@@ -23,7 +23,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-
         private void Listar()
         {
             try
@@ -54,17 +53,18 @@ namespace CapaPresentacion
         {
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].Visible = false;
-            dataGridView1.Columns[2].Width = 150;
+            dataGridView1.Columns[2].Visible = false;
             dataGridView1.Columns[3].Width = 150;
-            dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[5].Width = 100;
+            dataGridView1.Columns[4].Width = 150;
+            dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].Width = 100;
             dataGridView1.Columns[7].Width = 100;
-            dataGridView1.Columns[8].Width = 150;
-            dataGridView1.Columns[9].Width = 150;
-            dataGridView1.Columns[10].Width = 150;
-            dataGridView1.Columns[11].Width = 150;
-            dataGridView1.Columns[12].Width = 150;
+            dataGridView1.Columns[8].Width = 100;
+            dataGridView1.Columns[9].Visible = false;
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[11].Width = 100;
+            dataGridView1.Columns[12].Width = 100;
+            dataGridView1.Columns[13].Visible = false;
            
         }
 
@@ -479,6 +479,34 @@ namespace CapaPresentacion
                 chkEliminar.Value = !Convert.ToBoolean(chkEliminar.Value);
 
             }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                dgvMostarDetalle.DataSource=N_Ingreso.ListarDetalle(Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value));
+                decimal Total, Subtotal;
+                decimal Impuesto = Convert.ToDecimal(dataGridView1.CurrentRow.Cells["Impuesto"].Value);
+                Total = Convert.ToDecimal(dataGridView1.CurrentRow.Cells["Total"].Value);
+                Subtotal = Total / Impuesto;
+                txtSubTotalDetalle.Text = Subtotal.ToString("#0.00#");
+                txtTotalDetalle.Text=Total.ToString("#0.00#");
+                txtIVADetalle.Text = (Total - Subtotal).ToString("#0.00#");
+                panelDetalleDoc.Visible = true;
+
+
+                    
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnCerrarDetalle_Click(object sender, EventArgs e)
+        {
+            panelDetalleDoc.Visible = false;
         }
         
         

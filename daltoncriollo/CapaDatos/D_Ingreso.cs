@@ -43,7 +43,7 @@ namespace CapaDatos
             }
 
         }
-        
+
         public DataTable Buscar(string Valor)
         {
             SqlDataReader Resultado;

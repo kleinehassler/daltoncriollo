@@ -143,6 +143,7 @@
             this.mnuMFacturacion1.Name = "mnuMFacturacion1";
             this.mnuMFacturacion1.Size = new System.Drawing.Size(152, 22);
             this.mnuMFacturacion1.Text = "&Facturacion";
+            this.mnuMFacturacion1.Click += new System.EventHandler(this.mnuMFacturacion1_Click);
             // 
             // mnuMProduccion1
             // 

@@ -109,6 +109,18 @@
     <Compile Include="P_Bodega.Designer.cs">
       <DependentUpon>P_Bodega.cs</DependentUpon>
     </Compile>
+    <Compile Include="P_Egreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Egreso.Designer.cs">
+      <DependentUpon>P_Egreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_Factura.Designer.cs">
+      <DependentUpon>P_Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="P_Ingreso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="P_Bodega.resx">
       <DependentUpon>P_Bodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Egreso.resx">
+      <DependentUpon>P_Egreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_Factura.resx">
+      <DependentUpon>P_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P_Ingreso.resx">
       <DependentUpon>P_Ingreso.cs</DependentUpon>

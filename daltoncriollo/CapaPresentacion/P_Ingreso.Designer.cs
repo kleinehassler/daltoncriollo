@@ -39,9 +39,19 @@
             this.cmdDelete = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panelDetalleDoc = new System.Windows.Forms.Panel();
+            this.txtTotalDetalle = new System.Windows.Forms.TextBox();
+            this.txtIVADetalle = new System.Windows.Forms.TextBox();
+            this.txtSubTotalDetalle = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dgvMostarDetalle = new System.Windows.Forms.DataGridView();
+            this.btnCerrarDetalle = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelArticulos = new System.Windows.Forms.Panel();
@@ -80,11 +90,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.Seleccionar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.chkSeleccionar = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorIcono)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panelDetalleDoc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostarDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -182,6 +193,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panelDetalleDoc);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.txtBuscar);
             this.tabPage1.Controls.Add(this.dataGridView1);
@@ -192,6 +204,101 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Resumen";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panelDetalleDoc
+            // 
+            this.panelDetalleDoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelDetalleDoc.Controls.Add(this.txtTotalDetalle);
+            this.panelDetalleDoc.Controls.Add(this.txtIVADetalle);
+            this.panelDetalleDoc.Controls.Add(this.txtSubTotalDetalle);
+            this.panelDetalleDoc.Controls.Add(this.label16);
+            this.panelDetalleDoc.Controls.Add(this.label15);
+            this.panelDetalleDoc.Controls.Add(this.label14);
+            this.panelDetalleDoc.Controls.Add(this.dgvMostarDetalle);
+            this.panelDetalleDoc.Controls.Add(this.btnCerrarDetalle);
+            this.panelDetalleDoc.Location = new System.Drawing.Point(110, 88);
+            this.panelDetalleDoc.Name = "panelDetalleDoc";
+            this.panelDetalleDoc.Size = new System.Drawing.Size(694, 219);
+            this.panelDetalleDoc.TabIndex = 5;
+            this.panelDetalleDoc.Visible = false;
+            // 
+            // txtTotalDetalle
+            // 
+            this.txtTotalDetalle.Enabled = false;
+            this.txtTotalDetalle.Location = new System.Drawing.Point(590, 194);
+            this.txtTotalDetalle.Name = "txtTotalDetalle";
+            this.txtTotalDetalle.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalDetalle.TabIndex = 7;
+            // 
+            // txtIVADetalle
+            // 
+            this.txtIVADetalle.Enabled = false;
+            this.txtIVADetalle.Location = new System.Drawing.Point(348, 194);
+            this.txtIVADetalle.Name = "txtIVADetalle";
+            this.txtIVADetalle.Size = new System.Drawing.Size(100, 20);
+            this.txtIVADetalle.TabIndex = 6;
+            // 
+            // txtSubTotalDetalle
+            // 
+            this.txtSubTotalDetalle.Enabled = false;
+            this.txtSubTotalDetalle.Location = new System.Drawing.Point(83, 194);
+            this.txtSubTotalDetalle.Name = "txtSubTotalDetalle";
+            this.txtSubTotalDetalle.Size = new System.Drawing.Size(100, 20);
+            this.txtSubTotalDetalle.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(535, 198);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 15);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "TOTAL";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(315, 198);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(27, 15);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "IVA";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(13, 198);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 15);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "SubTotal";
+            // 
+            // dgvMostarDetalle
+            // 
+            this.dgvMostarDetalle.AllowUserToAddRows = false;
+            this.dgvMostarDetalle.AllowUserToDeleteRows = false;
+            this.dgvMostarDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostarDetalle.Location = new System.Drawing.Point(16, 27);
+            this.dgvMostarDetalle.Name = "dgvMostarDetalle";
+            this.dgvMostarDetalle.ReadOnly = true;
+            this.dgvMostarDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMostarDetalle.Size = new System.Drawing.Size(675, 166);
+            this.dgvMostarDetalle.TabIndex = 1;
+            // 
+            // btnCerrarDetalle
+            // 
+            this.btnCerrarDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarDetalle.ForeColor = System.Drawing.Color.Red;
+            this.btnCerrarDetalle.Location = new System.Drawing.Point(668, 1);
+            this.btnCerrarDetalle.Name = "btnCerrarDetalle";
+            this.btnCerrarDetalle.Size = new System.Drawing.Size(21, 29);
+            this.btnCerrarDetalle.TabIndex = 0;
+            this.btnCerrarDetalle.Text = "X";
+            this.btnCerrarDetalle.UseVisualStyleBackColor = true;
+            this.btnCerrarDetalle.Click += new System.EventHandler(this.btnCerrarDetalle_Click);
             // 
             // btnBuscar
             // 
@@ -253,6 +360,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(798, 276);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Seleccionar
+            // 
+            this.Seleccionar.HeaderText = "Seleccionar";
+            this.Seleccionar.Name = "Seleccionar";
+            this.Seleccionar.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -478,9 +592,10 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(492, 8);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 11);
+            this.label12.Size = new System.Drawing.Size(38, 11);
             this.label12.TabIndex = 16;
-            this.label12.Text = "Estado Ingreso";
+            this.label12.Text = "Estado";
+            this.label12.Visible = false;
             // 
             // txtEstado
             // 
@@ -488,6 +603,7 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(100, 19);
             this.txtEstado.TabIndex = 15;
+            this.txtEstado.Visible = false;
             // 
             // cboBodega
             // 
@@ -580,6 +696,7 @@
             this.txtIdeDocumento.Name = "txtIdeDocumento";
             this.txtIdeDocumento.Size = new System.Drawing.Size(100, 19);
             this.txtIdeDocumento.TabIndex = 4;
+            this.txtIdeDocumento.Visible = false;
             // 
             // txtNombreProveedor
             // 
@@ -625,12 +742,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Ingresos";
             // 
-            // Seleccionar
-            // 
-            this.Seleccionar.HeaderText = "Seleccionar";
-            this.Seleccionar.Name = "Seleccionar";
-            this.Seleccionar.ReadOnly = true;
-            // 
             // chkSeleccionar
             // 
             this.chkSeleccionar.AutoSize = true;
@@ -661,6 +772,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.panelDetalleDoc.ResumeLayout(false);
+            this.panelDetalleDoc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMostarDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -728,5 +842,14 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Seleccionar;
         private System.Windows.Forms.CheckBox chkSeleccionar;
+        private System.Windows.Forms.Panel panelDetalleDoc;
+        private System.Windows.Forms.TextBox txtTotalDetalle;
+        private System.Windows.Forms.TextBox txtIVADetalle;
+        private System.Windows.Forms.TextBox txtSubTotalDetalle;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView dgvMostarDetalle;
+        private System.Windows.Forms.Button btnCerrarDetalle;
     }
 }

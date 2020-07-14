@@ -24,7 +24,7 @@ namespace CapaEntidad
         public int vendedor { get; set; }
         public int estado { get; set; }
         public DataTable Detalle { get; set; }
-
+        
         
     }
 }

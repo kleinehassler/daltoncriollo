@@ -30,3 +30,4 @@ C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.Repor
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmIngreso.resources
 C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.frmVista_Proveedor.resources
+C:\daltoncriollo\daltoncriollo\CapaPresentacion\obj\Debug\CapaPresentacion.P_Egreso.resources
