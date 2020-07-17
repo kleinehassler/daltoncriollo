@@ -27,11 +27,41 @@ namespace CapaNegocios
 
         }
 
-        public static string Insertar(int idedocumento, int tipodocumento, string nombredocu, string seriedocu, string numdocu, int sujeto, decimal subtotal, decimal iva, decimal total, int bodega, int vendedor, int estado, DataTable Detalles)
+
+        public static DataTable BuscarArticuloPTCodigo(string Valor)
+        {
+            D_Factura Datos = new D_Factura();
+            return Datos.BuscarArticuloPTCodigo(Valor);
+
+        }
+
+        public static DataTable ListarDetalle(int idedetalle)
+        {
+            D_Factura Datos = new D_Factura();
+            return Datos.ListarDetalle(idedetalle);
+
+        }
+
+        public static DataTable SeleccionarBodega()
+        {
+            D_Factura Datos = new D_Factura();
+            return Datos.SeleccionarBodega();
+
+        }
+
+        public static DataTable SeleccionarDocumento()
+        {
+            D_Factura Datos = new D_Factura();
+            return Datos.SeleccionarDocumento();
+
+        }
+
+
+
+        public static string Insertar(int tipodocumento, string nombredocu, string seriedocu, string numdocu, int sujeto, decimal subtotal, decimal iva, decimal total, int bodega, int vendedor, int estado, DataTable Detalles)
         {
             D_Factura Datos = new D_Factura();
             E_Factura Obj = new E_Factura();
-            Obj.idedocumento = idedocumento;
             Obj.tipodocu = tipodocumento;
             Obj.nombredocu = nombredocu;
             Obj.seriedocu = seriedocu;

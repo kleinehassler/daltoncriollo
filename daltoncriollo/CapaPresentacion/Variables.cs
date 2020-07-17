@@ -11,6 +11,7 @@ namespace CapaPresentacion
         public static int idUsuarios;
         public static int idProveedor;
         public static string NombreProveedor;
+        public static int idDocumento;
 
     }
 }

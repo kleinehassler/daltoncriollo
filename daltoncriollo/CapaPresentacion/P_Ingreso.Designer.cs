@@ -162,6 +162,7 @@
             this.cmdPrint.TabIndex = 13;
             this.cmdPrint.Text = "Imprimir";
             this.cmdPrint.UseVisualStyleBackColor = false;
+            this.cmdPrint.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
             // cmdDelete
             // 
@@ -237,6 +238,7 @@
             this.txtIVADetalle.Name = "txtIVADetalle";
             this.txtIVADetalle.Size = new System.Drawing.Size(100, 20);
             this.txtIVADetalle.TabIndex = 6;
+            this.txtIVADetalle.Visible = false;
             // 
             // txtSubTotalDetalle
             // 
@@ -245,6 +247,7 @@
             this.txtSubTotalDetalle.Name = "txtSubTotalDetalle";
             this.txtSubTotalDetalle.Size = new System.Drawing.Size(100, 20);
             this.txtSubTotalDetalle.TabIndex = 5;
+            this.txtSubTotalDetalle.Visible = false;
             // 
             // label16
             // 
@@ -265,6 +268,7 @@
             this.label15.Size = new System.Drawing.Size(27, 15);
             this.label15.TabIndex = 3;
             this.label15.Text = "IVA";
+            this.label15.Visible = false;
             // 
             // label14
             // 
@@ -275,6 +279,7 @@
             this.label14.Size = new System.Drawing.Size(64, 15);
             this.label14.TabIndex = 2;
             this.label14.Text = "SubTotal";
+            this.label14.Visible = false;
             // 
             // dgvMostarDetalle
             // 

@@ -508,6 +508,26 @@ namespace CapaPresentacion
         {
             panelDetalleDoc.Visible = false;
         }
+
+        private void cmdPrint_Click(object sender, EventArgs e)
+        {
+            // Reporte de Ingreso
+            try
+            {
+                Variables.idDocumento = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+                Reportes.frm_Rpt_Ingresos rpt = new Reportes.frm_Rpt_Ingresos();
+                rpt.ShowDialog();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
+
+        }
         
         
     }

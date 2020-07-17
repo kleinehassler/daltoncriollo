@@ -47,7 +47,6 @@ namespace CapaPresentacion
             }
         }
 
-
         private void formato()
         {
             dataGridView1.Columns[0].Width = 200;

@@ -196,11 +196,13 @@ namespace CapaPresentacion
                 decimal Total, Subtotal;
                 decimal Impuesto = Convert.ToDecimal(dataGridView1.CurrentRow.Cells["Impuesto"].Value);
                 Total = Convert.ToDecimal(dataGridView1.CurrentRow.Cells["Total"].Value);
-                Subtotal = Total / Impuesto;
+                Subtotal = Total / (1 + Impuesto);
+
                 txtSubTotalDetalle.Text = Subtotal.ToString("#0.00#");
                 txtTotalDetalle.Text = Total.ToString("#0.00#");
                 txtIVADetalle.Text = (Total - Subtotal).ToString("#0.00#");
                 panelDetalleDoc.Visible = true;
+
 
             }
             catch (Exception ex)
@@ -351,10 +353,152 @@ namespace CapaPresentacion
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
-            frmVista_Proveedor Vista = new frmVista_Proveedor();
+            frmVista_Sujetos Vista = new frmVista_Sujetos();
             Vista.ShowDialog();
             txtIdProveedor.Text = Convert.ToString(Variables.idProveedor);
             txtNombreProveedor.Text = Variables.NombreProveedor;
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Rpta = "";
+                if (txtIdProveedor.Text == string.Empty || txtImpuesto.Text == string.Empty || txtNumComprobante.Text == string.Empty || DtDetalle.Rows.Count == 0)
+                {
+                    this.MensajeError("Falta de Ingresar");
+                    ErrorIcono.SetError(txtIdProveedor, "Selecccione un Proveedor");
+                    ErrorIcono.SetError(txtImpuesto, "Ingrese un Impuesto");
+                    ErrorIcono.SetError(txtNumComprobante, "Ingrese un Numero de Comprobante");
+                    ErrorIcono.SetError(dgvDetalle, "Deve tener por lo Menos un Articulo");
+
+                }
+                else
+                {
+                    //Convert.ToInt32(txtIdeDocumento.Text),
+                    Rpta = N_Egreso.Insertar(2, "Egreso", txtSerie.Text.Trim(), txtNumComprobante.Text.Trim(), Convert.ToInt32(txtIdProveedor.Text), Convert.ToDecimal(txtSubTotal.Text), Convert.ToDecimal(txtIVA.Text), Convert.ToDecimal(txtTotal.Text), Convert.ToInt32(cboBodega.SelectedValue), Variables.idUsuarios, 1, DtDetalle);
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.MensajeOk("Se Registro Transaccion de Egreso");
+                        this.Limpiar();
+                        this.Listar();
+                        tabControl1.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        this.MensajeError(Rpta);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+
+            }
+
+        }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DialogResult Opcion;
+                Opcion = MessageBox.Show("Esta Seguro de Anular Egreso", "D Criollo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (Opcion == DialogResult.OK)
+                {
+                    int Codigo;
+                    String Rpta = "";
+
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (Convert.ToBoolean(row.Cells[0].Value))
+                        {
+                            Codigo = Convert.ToInt32(row.Cells[1].Value);
+                            Rpta = N_Egreso.Anular(Codigo);
+
+                            if (Rpta.Equals("OK"))
+                            {
+                                this.MensajeOk("Registro Anulado: " + Convert.ToString(row.Cells[6].Value) + "-" + Convert.ToString(row.Cells[7].Value));
+                            }
+
+                            else
+                            {
+                                this.MensajeError(Rpta);
+                            }
+                        }
+                    }
+                }
+                this.Listar();
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
+        }
+
+        private void cmdClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void dgvDetalle_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            this.CalcularTotal();
+        }
+
+        private void dgvDetalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataRow Fila = (DataRow)DtDetalle.Rows[e.RowIndex];
+            decimal Precio = Convert.ToDecimal(Fila["precio"]);
+            int Cantidad = Convert.ToInt32(Fila["cantidad"]);
+            Fila["importe"] = Precio * Cantidad;
+            this.CalcularTotal();
+
+        }
+
+        private void chkSeleccionar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSeleccionar.Checked)
+            {
+                dataGridView1.Columns[0].Visible = true;
+                cmdDelete.Enabled = true;
+
+            }
+            else
+            {
+                dataGridView1.Columns[0].Visible = false;
+                cmdDelete.Enabled = false;
+
+            }
+        }
+
+        private void cmdPrint_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Variables.idDocumento = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+                Reportes.frm_Rpt_Egresos rpt = new Reportes.frm_Rpt_Egresos();
+                rpt.ShowDialog();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+
+
+        }
+
+
+
     }
 }

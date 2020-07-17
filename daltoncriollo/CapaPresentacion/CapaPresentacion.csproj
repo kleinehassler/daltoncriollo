@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +83,23 @@
     <Compile Include="frmSistema.Designer.cs">
       <DependentUpon>frmSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVista_Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVista_Facturas.Designer.cs">
+      <DependentUpon>frmVista_Facturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVista_Proveedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmVista_Proveedor.Designer.cs">
       <DependentUpon>frmVista_Proveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVista_Sujetos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVista_Sujetos.Designer.cs">
+      <DependentUpon>frmVista_Sujetos.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -174,6 +192,24 @@
     <Compile Include="Reportes\frm_rptListoDocumentos.Designer.cs">
       <DependentUpon>frm_rptListoDocumentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frm_Rpt_Egresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frm_Rpt_Egresos.Designer.cs">
+      <DependentUpon>frm_Rpt_Egresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frm_Rpt_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frm_Rpt_Factura.Designer.cs">
+      <DependentUpon>frm_Rpt_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frm_Rpt_Ingresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frm_Rpt_Ingresos.Designer.cs">
+      <DependentUpon>frm_Rpt_Ingresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frm_rpt_ListaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,14 +217,23 @@
       <DependentUpon>frm_rpt_ListaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSistema.resx">
       <DependentUpon>frmSistema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVista_Facturas.resx">
+      <DependentUpon>frmVista_Facturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmVista_Proveedor.resx">
       <DependentUpon>frmVista_Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVista_Sujetos.resx">
+      <DependentUpon>frmVista_Sujetos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -229,6 +274,19 @@
     <EmbeddedResource Include="P_Usuarios.resx">
       <DependentUpon>P_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_Rpt_Egresos.resx">
+      <DependentUpon>frm_Rpt_Egresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_Rpt_Factura.resx">
+      <DependentUpon>frm_Rpt_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_Rpt_Ingresos.resx">
+      <DependentUpon>frm_Rpt_Ingresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptDocumentoProduccion.rdlc" />
+    <EmbeddedResource Include="Reportes\rptDocumentoFactura.rdlc" />
+    <EmbeddedResource Include="Reportes\rptDocumentoEgreso.rdlc" />
+    <EmbeddedResource Include="Reportes\rptDocumentoIngresos.rdlc" />
     <EmbeddedResource Include="Reportes\frmReporte_ListaArticulo.resx">
       <DependentUpon>frmReporte_ListaArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +302,7 @@
     <EmbeddedResource Include="Reportes\frm_rpt_ListaUsuarios.resx">
       <DependentUpon>frm_rpt_ListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptDocumentoA4.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaDocumentos.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaSujeto.rdlc" />

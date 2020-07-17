@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBuscarArticulo = new System.Windows.Forms.TextBox();
             this.panelArticulos = new System.Windows.Forms.Panel();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
@@ -138,6 +138,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(660, 150);
             this.dgvArticulos.TabIndex = 4;
+            this.dgvArticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellDoubleClick);
             // 
             // btnCerrarArticulos
             // 
@@ -149,6 +150,7 @@
             this.btnCerrarArticulos.TabIndex = 3;
             this.btnCerrarArticulos.Text = "X";
             this.btnCerrarArticulos.UseVisualStyleBackColor = true;
+            this.btnCerrarArticulos.Click += new System.EventHandler(this.btnCerrarArticulos_Click);
             // 
             // btnFiltrarArticulos
             // 
@@ -158,6 +160,7 @@
             this.btnFiltrarArticulos.TabIndex = 2;
             this.btnFiltrarArticulos.Text = "Buscar";
             this.btnFiltrarArticulos.UseVisualStyleBackColor = true;
+            this.btnFiltrarArticulos.Click += new System.EventHandler(this.btnFiltrarArticulos_Click);
             // 
             // label13
             // 
@@ -201,7 +204,7 @@
             this.groupBox1.Size = new System.Drawing.Size(735, 283);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Ingreso";
+            this.groupBox1.Text = "Datos de Factura";
             // 
             // label12
             // 
@@ -241,7 +244,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(289, 44);
+            this.label5.Location = new System.Drawing.Point(116, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 11);
             this.label5.TabIndex = 12;
@@ -259,7 +262,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(182, 44);
+            this.label4.Location = new System.Drawing.Point(9, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 11);
             this.label4.TabIndex = 11;
@@ -273,14 +276,16 @@
             this.btnBuscarProveedor.TabIndex = 10;
             this.btnBuscarProveedor.Text = "Buscar";
             this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
             // cboComprobante
             // 
             this.cboComprobante.FormattingEnabled = true;
-            this.cboComprobante.Location = new System.Drawing.Point(9, 57);
+            this.cboComprobante.Location = new System.Drawing.Point(395, 20);
             this.cboComprobante.Name = "cboComprobante";
             this.cboComprobante.Size = new System.Drawing.Size(121, 19);
             this.cboComprobante.TabIndex = 9;
+            this.cboComprobante.Visible = false;
             // 
             // txtImpuesto
             // 
@@ -293,14 +298,14 @@
             // 
             // txtNumComprobante
             // 
-            this.txtNumComprobante.Location = new System.Drawing.Point(290, 57);
+            this.txtNumComprobante.Location = new System.Drawing.Point(117, 55);
             this.txtNumComprobante.Name = "txtNumComprobante";
             this.txtNumComprobante.Size = new System.Drawing.Size(100, 19);
             this.txtNumComprobante.TabIndex = 7;
             // 
             // txtSerie
             // 
-            this.txtSerie.Location = new System.Drawing.Point(184, 57);
+            this.txtSerie.Location = new System.Drawing.Point(11, 55);
             this.txtSerie.Name = "txtSerie";
             this.txtSerie.Size = new System.Drawing.Size(100, 19);
             this.txtSerie.TabIndex = 6;
@@ -332,11 +337,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 43);
+            this.label3.Location = new System.Drawing.Point(393, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 11);
             this.label3.TabIndex = 1;
             this.label3.Text = "Comprobante";
+            this.label3.Visible = false;
             // 
             // label2
             // 
@@ -351,11 +357,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Ingresos";
+            this.label1.Text = "Facturación";
             // 
             // chkSeleccionar
             // 
@@ -366,6 +372,7 @@
             this.chkSeleccionar.TabIndex = 23;
             this.chkSeleccionar.Text = "Seleccionar";
             this.chkSeleccionar.UseVisualStyleBackColor = true;
+            this.chkSeleccionar.CheckedChanged += new System.EventHandler(this.chkSeleccionar_CheckedChanged);
             // 
             // txtIVA
             // 
@@ -397,6 +404,7 @@
             this.btnNew.Tag = "0";
             this.btnNew.Text = "Registrar";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // cmdClose
             // 
@@ -414,6 +422,7 @@
             this.cmdClose.TabIndex = 21;
             this.cmdClose.Text = "Cerrar";
             this.cmdClose.UseVisualStyleBackColor = false;
+            this.cmdClose.Click += new System.EventHandler(this.cmdClose_Click);
             // 
             // cmdPrint
             // 
@@ -431,6 +440,7 @@
             this.cmdPrint.TabIndex = 20;
             this.cmdPrint.Text = "Imprimir";
             this.cmdPrint.UseVisualStyleBackColor = false;
+            this.cmdPrint.Click += new System.EventHandler(this.cmdPrint_Click);
             // 
             // cmdDelete
             // 
@@ -448,6 +458,7 @@
             this.cmdDelete.TabIndex = 19;
             this.cmdDelete.Text = "Anular";
             this.cmdDelete.UseVisualStyleBackColor = false;
+            this.cmdDelete.Click += new System.EventHandler(this.cmdDelete_Click);
             // 
             // tabControl1
             // 
@@ -505,6 +516,7 @@
             this.txtIVADetalle.Name = "txtIVADetalle";
             this.txtIVADetalle.Size = new System.Drawing.Size(100, 20);
             this.txtIVADetalle.TabIndex = 6;
+            this.txtIVADetalle.Visible = false;
             // 
             // txtSubTotalDetalle
             // 
@@ -513,6 +525,7 @@
             this.txtSubTotalDetalle.Name = "txtSubTotalDetalle";
             this.txtSubTotalDetalle.Size = new System.Drawing.Size(100, 20);
             this.txtSubTotalDetalle.TabIndex = 5;
+            this.txtSubTotalDetalle.Visible = false;
             // 
             // label16
             // 
@@ -533,6 +546,7 @@
             this.label15.Size = new System.Drawing.Size(27, 15);
             this.label15.TabIndex = 3;
             this.label15.Text = "IVA";
+            this.label15.Visible = false;
             // 
             // label14
             // 
@@ -543,6 +557,7 @@
             this.label14.Size = new System.Drawing.Size(64, 15);
             this.label14.TabIndex = 2;
             this.label14.Text = "SubTotal";
+            this.label14.Visible = false;
             // 
             // dgvMostarDetalle
             // 
@@ -566,6 +581,7 @@
             this.btnCerrarDetalle.TabIndex = 0;
             this.btnCerrarDetalle.Text = "X";
             this.btnCerrarDetalle.UseVisualStyleBackColor = true;
+            this.btnCerrarDetalle.Click += new System.EventHandler(this.btnCerrarDetalle_Click);
             // 
             // btnBuscar
             // 
@@ -576,6 +592,7 @@
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -590,14 +607,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeight = 30;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -608,23 +625,25 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(798, 276);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // Seleccionar
             // 
@@ -663,7 +682,7 @@
             this.groupBox2.Size = new System.Drawing.Size(734, 234);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detalle :: Ingreso";
+            this.groupBox2.Text = "Detalle :: Factura";
             // 
             // txtSubTotal
             // 
@@ -709,6 +728,8 @@
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.Size = new System.Drawing.Size(718, 150);
             this.dgvDetalle.TabIndex = 3;
+            this.dgvDetalle.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalle_CellEndEdit);
+            this.dgvDetalle.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvDetalle_RowsRemoved);
             // 
             // btnVerArticulos
             // 
@@ -718,6 +739,7 @@
             this.btnVerArticulos.TabIndex = 2;
             this.btnVerArticulos.Text = "Ver Ariculos";
             this.btnVerArticulos.UseVisualStyleBackColor = true;
+            this.btnVerArticulos.Click += new System.EventHandler(this.btnVerArticulos_Click);
             // 
             // txtCodigoArt
             // 
@@ -725,6 +747,8 @@
             this.txtCodigoArt.Name = "txtCodigoArt";
             this.txtCodigoArt.Size = new System.Drawing.Size(275, 19);
             this.txtCodigoArt.TabIndex = 0;
+            this.txtCodigoArt.TextChanged += new System.EventHandler(this.txtCodigoArt_TextChanged);
+            this.txtCodigoArt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoArt_KeyDown);
             // 
             // label7
             // 
@@ -739,16 +763,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 583);
+            this.ClientSize = new System.Drawing.Size(885, 462);
+            this.Controls.Add(this.cmdPrint);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkSeleccionar);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.cmdClose);
-            this.Controls.Add(this.cmdPrint);
             this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.tabControl1);
             this.Name = "P_Factura";
-            this.Text = "P_Factura";
+            this.Text = "Movimientos de Facturación";
+            this.Load += new System.EventHandler(this.P_Factura_Load);
             this.panelArticulos.ResumeLayout(false);
             this.panelArticulos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();

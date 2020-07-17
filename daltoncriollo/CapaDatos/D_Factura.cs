@@ -21,7 +21,7 @@ namespace CapaDatos
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("factura_listar", SqlCon);
+                SqlCommand Comando = new SqlCommand("Factura_listar", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 SqlCon.Open();
                 Resultado = Comando.ExecuteReader();
@@ -70,6 +70,122 @@ namespace CapaDatos
 
         }
 
+        public DataTable BuscarArticuloPTCodigo(string Valor)
+        {
+            // Buscar Articulos en por Codigo de Barras 
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("articulo_buscar_codigo_pt", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
+        public DataTable ListarDetalle(int IdDocumento)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("factura_listar_detalle", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@idfactura", SqlDbType.Int).Value = IdDocumento;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
+        public DataTable SeleccionarBodega()
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spBodega_Seleccionar", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
+        public DataTable SeleccionarDocumento()
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spDocumentos_Seleccionar", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
         public string Insertar(E_Factura Obj)
         {
             string Rpta = "";
@@ -89,7 +205,8 @@ namespace CapaDatos
                 Comando.Parameters.Add("@bodega", SqlDbType.Int).Value = Obj.bodega;
                 Comando.Parameters.Add("@detalle", SqlDbType.Structured).Value = Obj.Detalle;
                 SqlCon.Open();
-                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se INSERTO Registro la Factura";
+                Comando.ExecuteNonQuery();
+                Rpta = "OK";
 
             }
             catch (Exception ex)
@@ -104,26 +221,24 @@ namespace CapaDatos
             return Rpta;
         }
 
-        public string Anular(int idFactura)
+        public string Anular(int idfactura)
         {
             string Rpta = "";
-            
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("factura_anular", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@idFactura", SqlDbType.Int).Value = idFactura;
+                Comando.Parameters.Add("@idfactura", SqlDbType.Int).Value = idfactura;
                 SqlCon.Open();
                 Comando.ExecuteNonQuery();
-                Rpta="OK";
-                
+                Rpta = "OK";
+
             }
             catch (Exception ex)
             {
                 Rpta = ex.Message;
-                
             }
             finally
             {
@@ -131,7 +246,6 @@ namespace CapaDatos
             }
             return Rpta;
         }
-
 
     }
 }
