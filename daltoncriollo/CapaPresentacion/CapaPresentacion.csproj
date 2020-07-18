@@ -71,6 +71,30 @@
     <Compile Include="frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsulta_Egresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta_Egresos.Designer.cs">
+      <DependentUpon>frmConsulta_Egresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta_Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta_Factura.Designer.cs">
+      <DependentUpon>frmConsulta_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsulta_Ingresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsulta_Ingresos.Designer.cs">
+      <DependentUpon>frmConsulta_Ingresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKardexFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKardexFull.Designer.cs">
+      <DependentUpon>frmKardexFull.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +234,12 @@
     <Compile Include="Reportes\frm_Rpt_Ingresos.Designer.cs">
       <DependentUpon>frm_Rpt_Ingresos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\frm_Rpt_KardexFull.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\frm_Rpt_KardexFull.Designer.cs">
+      <DependentUpon>frm_Rpt_KardexFull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\frm_rpt_ListaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +249,18 @@
     <Compile Include="Variables.cs" />
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta_Egresos.resx">
+      <DependentUpon>frmConsulta_Egresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta_Factura.resx">
+      <DependentUpon>frmConsulta_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsulta_Ingresos.resx">
+      <DependentUpon>frmConsulta_Ingresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKardexFull.resx">
+      <DependentUpon>frmKardexFull.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -283,6 +325,9 @@
     <EmbeddedResource Include="Reportes\frm_Rpt_Ingresos.resx">
       <DependentUpon>frm_Rpt_Ingresos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frm_Rpt_KardexFull.resx">
+      <DependentUpon>frm_Rpt_KardexFull.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptDocumentoProduccion.rdlc" />
     <EmbeddedResource Include="Reportes\rptDocumentoFactura.rdlc" />
     <EmbeddedResource Include="Reportes\rptDocumentoEgreso.rdlc" />
@@ -303,6 +348,7 @@
       <DependentUpon>frm_rpt_ListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\rptDocumentoA4.rdlc" />
+    <EmbeddedResource Include="Reportes\rptKardexFull.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaDocumentos.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaUsuarios.rdlc" />
     <EmbeddedResource Include="Reportes\rptListaSujeto.rdlc" />

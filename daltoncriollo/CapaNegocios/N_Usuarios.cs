@@ -103,7 +103,17 @@ namespace CapaNegocios
             return Datos.Eliminar(Obj);
 
         }
-
+        
+        public static string ChangePassword(int ideusu, string loginusu, string paswoordusu)
+        {
+            D_Usuarios Datos = new D_Usuarios();
+            E_Usuarios Obj = new E_Usuarios();
+            Obj.ideusu = ideusu;
+            Obj.loginusu = loginusu;
+            Obj.paswoordusu = paswoordusu;
+            return Datos.ChangePassword(Obj);
+            
+        }
 
 
     }

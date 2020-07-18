@@ -127,28 +127,28 @@
             // mnuMIngresos1
             // 
             this.mnuMIngresos1.Name = "mnuMIngresos1";
-            this.mnuMIngresos1.Size = new System.Drawing.Size(152, 22);
+            this.mnuMIngresos1.Size = new System.Drawing.Size(136, 22);
             this.mnuMIngresos1.Text = "&Ingresos";
             this.mnuMIngresos1.Click += new System.EventHandler(this.mnuMIngresos1_Click);
             // 
             // mnuMEgresos1
             // 
             this.mnuMEgresos1.Name = "mnuMEgresos1";
-            this.mnuMEgresos1.Size = new System.Drawing.Size(152, 22);
+            this.mnuMEgresos1.Size = new System.Drawing.Size(136, 22);
             this.mnuMEgresos1.Text = "&Egresos";
             this.mnuMEgresos1.Click += new System.EventHandler(this.mnuMEgresos1_Click);
             // 
             // mnuMFacturacion1
             // 
             this.mnuMFacturacion1.Name = "mnuMFacturacion1";
-            this.mnuMFacturacion1.Size = new System.Drawing.Size(152, 22);
+            this.mnuMFacturacion1.Size = new System.Drawing.Size(136, 22);
             this.mnuMFacturacion1.Text = "&Facturacion";
             this.mnuMFacturacion1.Click += new System.EventHandler(this.mnuMFacturacion1_Click);
             // 
             // mnuMProduccion1
             // 
             this.mnuMProduccion1.Name = "mnuMProduccion1";
-            this.mnuMProduccion1.Size = new System.Drawing.Size(152, 22);
+            this.mnuMProduccion1.Size = new System.Drawing.Size(136, 22);
             this.mnuMProduccion1.Text = "&Produccion";
             // 
             // mnuResumenes
@@ -165,26 +165,29 @@
             // mnuRIngresos1
             // 
             this.mnuRIngresos1.Name = "mnuRIngresos1";
-            this.mnuRIngresos1.Size = new System.Drawing.Size(135, 22);
+            this.mnuRIngresos1.Size = new System.Drawing.Size(152, 22);
             this.mnuRIngresos1.Text = "I&ngresos";
+            this.mnuRIngresos1.Click += new System.EventHandler(this.mnuRIngresos1_Click);
             // 
             // mnuREgresos
             // 
             this.mnuREgresos.Name = "mnuREgresos";
-            this.mnuREgresos.Size = new System.Drawing.Size(135, 22);
+            this.mnuREgresos.Size = new System.Drawing.Size(152, 22);
             this.mnuREgresos.Text = "E&gresos";
+            this.mnuREgresos.Click += new System.EventHandler(this.mnuREgresos_Click);
             // 
             // mnuRKardex1
             // 
             this.mnuRKardex1.Name = "mnuRKardex1";
-            this.mnuRKardex1.Size = new System.Drawing.Size(135, 22);
+            this.mnuRKardex1.Size = new System.Drawing.Size(152, 22);
             this.mnuRKardex1.Text = "&Kardex";
+            this.mnuRKardex1.Click += new System.EventHandler(this.mnuRKardex1_Click);
             // 
             // mnuRProduccion1
             // 
             this.mnuRProduccion1.Name = "mnuRProduccion1";
-            this.mnuRProduccion1.Size = new System.Drawing.Size(135, 22);
-            this.mnuRProduccion1.Text = "P&roduccion";
+            this.mnuRProduccion1.Size = new System.Drawing.Size(152, 22);
+            this.mnuRProduccion1.Text = "Facturacion";
             this.mnuRProduccion1.Click += new System.EventHandler(this.produccionToolStripMenuItem2_Click);
             // 
             // mnuUsuarios
@@ -208,6 +211,7 @@
             this.mnuUCClave.Name = "mnuUCClave";
             this.mnuUCClave.Size = new System.Drawing.Size(164, 22);
             this.mnuUCClave.Text = "Cam&bio de Clave";
+            this.mnuUCClave.Click += new System.EventHandler(this.mnuUCClave_Click);
             // 
             // salirToolStripMenuItem
             // 

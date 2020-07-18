@@ -71,8 +71,8 @@
             this.ClientSize = new System.Drawing.Size(756, 476);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_Rpt_Ingresos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Documento Ingreso";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_Rpt_Ingresos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.spDocumentos_Comprobante_IngresoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();

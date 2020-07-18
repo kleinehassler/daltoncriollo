@@ -136,7 +136,9 @@ namespace CapaPresentacion
 
         private void produccionToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-          
+            frmConsulta_Factura frm = new frmConsulta_Factura();
+            frm.MdiParent = this;
+            frm.Show();
         }
 
         private void bodegasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -297,6 +299,36 @@ namespace CapaPresentacion
             frm.MdiParent = this;
             frm.Show();
 
+        }
+
+        private void mnuRIngresos1_Click(object sender, EventArgs e)
+        {
+            frmConsulta_Ingresos frm = new frmConsulta_Ingresos();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void mnuREgresos_Click(object sender, EventArgs e)
+        {
+            frmConsulta_Egresos frm = new frmConsulta_Egresos();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void mnuUCClave_Click(object sender, EventArgs e)
+        {
+            frmChangePassword frm = new frmChangePassword();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuRKardex1_Click(object sender, EventArgs e)
+        {
+            frmKardexFull frm = new frmKardexFull();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

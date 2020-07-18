@@ -26,8 +26,7 @@ namespace CapaNegocios
             return Datos.Buscar(Valor);
 
         }
-
-
+        
         public static DataTable BuscarArticuloPTCodigo(string Valor)
         {
             D_Factura Datos = new D_Factura();
@@ -35,6 +34,20 @@ namespace CapaNegocios
 
         }
 
+        public static DataTable BuscarArticuloMPCodigo(string Valor)
+        {
+            D_Factura Datos = new D_Factura();
+            return Datos.BuscarArticuloMPCodigo(Valor);
+
+        }
+
+        public static DataTable ConsultarFechas(DateTime fechaini, DateTime fechafin)
+        {
+            D_Factura Datos = new D_Factura();
+            return Datos.ConsultarFechas(fechaini, fechafin);
+
+        }
+        
         public static DataTable ListarDetalle(int idedetalle)
         {
             D_Factura Datos = new D_Factura();
@@ -55,9 +68,7 @@ namespace CapaNegocios
             return Datos.SeleccionarDocumento();
 
         }
-
-
-
+        
         public static string Insertar(int tipodocumento, string nombredocu, string seriedocu, string numdocu, int sujeto, decimal subtotal, decimal iva, decimal total, int bodega, int vendedor, int estado, DataTable Detalles)
         {
             D_Factura Datos = new D_Factura();

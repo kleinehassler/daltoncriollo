@@ -80,8 +80,7 @@ namespace CapaPresentacion
         {
             MessageBox.Show(Mensaje, "D Criollo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-
+        
         private void MensajeOk(string Mensaje)
         {
             MessageBox.Show(Mensaje, "D Criollo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -289,6 +288,11 @@ namespace CapaPresentacion
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

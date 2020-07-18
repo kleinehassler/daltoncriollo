@@ -34,7 +34,21 @@ namespace CapaNegocios
             return Datos.BuscarArticuloPTCodigo(Valor);
 
         }
+        
+        public static DataTable BuscarArticuloMPCodigo(string Valor)
+        {
+            D_Ingreso Datos = new D_Ingreso();
+            return Datos.BuscarArticuloMPCodigo(Valor);
 
+        }
+
+        public static DataTable ConsultarFechas(DateTime FechaInicio, DateTime FechaFinal)
+        {
+            D_Ingreso Datos = new D_Ingreso();
+            return Datos.ConsultarFechas(FechaInicio, FechaFinal);
+
+        }
+        
         public static DataTable ListarDetalle(int idedetalle)
         {
             D_Ingreso Datos = new D_Ingreso();

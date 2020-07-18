@@ -264,7 +264,35 @@ namespace CapaDatos
             }
             return Rpta;
         }
-        
+
+        public string ChangePassword(E_Usuarios Obj)
+        {
+            string Rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spUsuario_ChangePassw", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                
+                Comando.Parameters.Add("@ideusr", SqlDbType.Int).Value = Obj.ideusu;
+                Comando.Parameters.Add("@login", SqlDbType.VarChar).Value = Obj.loginusu;
+                Comando.Parameters.Add("@newpw", SqlDbType.VarChar).Value = Obj.paswoordusu;
+                SqlCon.Open();
+                Rpta = Comando.ExecuteNonQuery() == 1 ? "OK" : "No se CAMBIO CLAVE";
+
+            }
+            catch (Exception ex)
+            {
+                Rpta = ex.Message;
+            }
+
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return Rpta;
+        }
 
 
 

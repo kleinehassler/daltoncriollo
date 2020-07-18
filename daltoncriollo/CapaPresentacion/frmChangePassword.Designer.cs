@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtClaveAnt = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtClaveNew1 = new System.Windows.Forms.TextBox();
@@ -39,47 +37,29 @@
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtClaveAnt
-            // 
-            this.txtClaveAnt.Location = new System.Drawing.Point(178, 66);
-            this.txtClaveAnt.Name = "txtClaveAnt";
-            this.txtClaveAnt.PasswordChar = '*';
-            this.txtClaveAnt.Size = new System.Drawing.Size(227, 20);
-            this.txtClaveAnt.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Clave Anterior";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 111);
+            this.label2.Location = new System.Drawing.Point(55, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 16);
+            this.label2.Size = new System.Drawing.Size(97, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Clave Anterior";
+            this.label2.Text = "Nueva Clave";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(55, 154);
+            this.label3.Location = new System.Drawing.Point(55, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 16);
+            this.label3.Size = new System.Drawing.Size(103, 16);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Clave Anterior";
+            this.label3.Text = "Repetir Clave";
             // 
             // txtClaveNew1
             // 
-            this.txtClaveNew1.Location = new System.Drawing.Point(178, 111);
+            this.txtClaveNew1.Location = new System.Drawing.Point(178, 77);
             this.txtClaveNew1.Name = "txtClaveNew1";
             this.txtClaveNew1.PasswordChar = '*';
             this.txtClaveNew1.Size = new System.Drawing.Size(227, 20);
@@ -87,7 +67,7 @@
             // 
             // txtClaveNew2
             // 
-            this.txtClaveNew2.Location = new System.Drawing.Point(178, 153);
+            this.txtClaveNew2.Location = new System.Drawing.Point(178, 119);
             this.txtClaveNew2.Name = "txtClaveNew2";
             this.txtClaveNew2.PasswordChar = '*';
             this.txtClaveNew2.Size = new System.Drawing.Size(227, 20);
@@ -97,11 +77,12 @@
             // 
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Enabled = false;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(58, 21);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(347, 19);
+            this.txtUsuario.Size = new System.Drawing.Size(347, 22);
             this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 
@@ -112,6 +93,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -122,6 +104,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmChangePassword
             // 
@@ -135,8 +118,6 @@
             this.Controls.Add(this.txtClaveNew1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtClaveAnt);
             this.Name = "frmChangePassword";
             this.Text = "Cambiar el PassWord";
             this.Load += new System.EventHandler(this.frmChangePassword_Load);
@@ -147,8 +128,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtClaveAnt;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtClaveNew1;
