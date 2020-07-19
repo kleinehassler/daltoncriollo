@@ -35,6 +35,14 @@ namespace CapaNegocios
 
         }
 
+        public static DataTable BuscarCodigoArtMP(string Valor)
+        {
+            D_Articulo Datos = new D_Articulo();
+            return Datos.BuscarCodigoArtMP(Valor);
+
+        }
+
+
         public static string Insertar(string nombreart, string codigoart, decimal precioart, int tipoart, decimal stock, string unidad)
         {
            D_Articulo Datos = new D_Articulo();

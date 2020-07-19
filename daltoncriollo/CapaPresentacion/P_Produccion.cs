@@ -283,5 +283,10 @@ namespace CapaPresentacion
             this.Buscar();
         }
 
+        private void cmdPrint_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -73,6 +73,36 @@ namespace CapaDatos
 
         }
 
+        public DataTable BuscarMP(int idPT, decimal requerimiento)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("spProduccion_Receta1", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@idPT", SqlDbType.Int).Value = idPT;
+                Comando.Parameters.Add("@requerimiento", SqlDbType.Decimal).Value = requerimiento;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+
+            }
+
+        }
+
         public DataTable SeleccionarPT()
         {
             SqlDataReader Resultado;

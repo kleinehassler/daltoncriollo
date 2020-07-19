@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCalculoProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalculoProduccion.Designer.cs">
+      <DependentUpon>frmCalculoProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     <Compile Include="P_Egreso.Designer.cs">
       <DependentUpon>P_Egreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="P_EgresoMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_EgresoMP.Designer.cs">
+      <DependentUpon>P_EgresoMP.cs</DependentUpon>
+    </Compile>
     <Compile Include="P_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +180,12 @@
     </Compile>
     <Compile Include="P_Ingreso.Designer.cs">
       <DependentUpon>P_Ingreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P_IngresoMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P_IngresoMP.Designer.cs">
+      <DependentUpon>P_IngresoMP.cs</DependentUpon>
     </Compile>
     <Compile Include="P_Produccion.cs">
       <SubType>Form</SubType>
@@ -247,6 +265,9 @@
       <DependentUpon>frm_rpt_ListaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="frmCalculoProduccion.resx">
+      <DependentUpon>frmCalculoProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,11 +322,17 @@
     <EmbeddedResource Include="P_Egreso.resx">
       <DependentUpon>P_Egreso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="P_EgresoMP.resx">
+      <DependentUpon>P_EgresoMP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="P_Factura.resx">
       <DependentUpon>P_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P_Ingreso.resx">
       <DependentUpon>P_Ingreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P_IngresoMP.resx">
+      <DependentUpon>P_IngresoMP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="P_Produccion.resx">
       <DependentUpon>P_Produccion.cs</DependentUpon>

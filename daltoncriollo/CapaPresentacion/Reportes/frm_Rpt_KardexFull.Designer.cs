@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
             this.spKardexBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spKardexTableAdapter = new CapaPresentacion.Reportes.dsSistemaTableAdapters.spKardexTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spKardexBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spKardexBindingSource
+            // 
+            this.spKardexBindingSource.DataMember = "spKardex";
+            this.spKardexBindingSource.DataSource = this.dsSistema;
+            // 
+            // dsSistema
+            // 
+            this.dsSistema.DataSetName = "dsSistema";
+            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(909, 498);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dsSistema
-            // 
-            this.dsSistema.DataSetName = "dsSistema";
-            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // spKardexBindingSource
-            // 
-            this.spKardexBindingSource.DataMember = "spKardex";
-            this.spKardexBindingSource.DataSource = this.dsSistema;
-            // 
             // spKardexTableAdapter
             // 
             this.spKardexTableAdapter.ClearBeforeFill = true;
@@ -71,10 +71,11 @@
             this.ClientSize = new System.Drawing.Size(909, 498);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_Rpt_KardexFull";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kardex";
             this.Load += new System.EventHandler(this.frm_Rpt_KardexFull_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spKardexBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -410,6 +410,8 @@ namespace CapaPresentacion
             this.Close();
         }
 
+
+
         private void txtBuscarArticulo_TextChanged(object sender, EventArgs e)
         {
 

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
             this.spLisSujetosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spLisSujetosTableAdapter = new CapaPresentacion.Reportes.dsSistemaTableAdapters.spLisSujetosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLisSujetosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spLisSujetosBindingSource
+            // 
+            this.spLisSujetosBindingSource.DataMember = "spLisSujetos";
+            this.spLisSujetosBindingSource.DataSource = this.dsSistema;
+            // 
+            // dsSistema
+            // 
+            this.dsSistema.DataSetName = "dsSistema";
+            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(846, 380);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dsSistema
-            // 
-            this.dsSistema.DataSetName = "dsSistema";
-            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // spLisSujetosBindingSource
-            // 
-            this.spLisSujetosBindingSource.DataMember = "spLisSujetos";
-            this.spLisSujetosBindingSource.DataSource = this.dsSistema;
-            // 
             // spLisSujetosTableAdapter
             // 
             this.spLisSujetosTableAdapter.ClearBeforeFill = true;
@@ -71,11 +71,11 @@
             this.ClientSize = new System.Drawing.Size(846, 380);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_rptListaSujetos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Sujetos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_rptListaSujetos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLisSujetosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             this.ResumeLayout(false);
 
         }

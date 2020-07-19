@@ -16,6 +16,7 @@ namespace CapaDatos
     public class D_Ingreso
     {
 
+
         public DataTable Listar()
         {
             SqlDataReader Resultado;

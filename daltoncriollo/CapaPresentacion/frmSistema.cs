@@ -172,6 +172,8 @@ namespace CapaPresentacion
                 mnuMEgresos1.Enabled = true;
                 mnuMFacturacion1.Enabled = true;
                 mnuMProduccion1.Enabled = true;
+                mnuMIMP1.Enabled = true;
+                mnuMEgresoMP1.Enabled = true;
 
                 mnuResumenes.Enabled = true;
                 mnuRIngresos1.Enabled = true;
@@ -197,6 +199,8 @@ namespace CapaPresentacion
                 mnuMEgresos1.Enabled = true;
                 mnuMFacturacion1.Enabled = false;
                 mnuMProduccion1.Enabled = true;
+                mnuMIMP1.Enabled = true;
+                mnuMEgresoMP1.Enabled = true;
 
                 mnuResumenes.Enabled = true;
                 mnuRIngresos1.Enabled = true;
@@ -222,6 +226,8 @@ namespace CapaPresentacion
                 mnuMEgresos1.Enabled = false;
                 mnuMFacturacion1.Enabled = true;
                 mnuMProduccion1.Enabled = false;
+                mnuMIMP1.Enabled = false;
+                mnuMEgresoMP1.Enabled = false;
 
                 mnuResumenes.Enabled = false;
                 mnuRIngresos1.Enabled = false;
@@ -247,6 +253,8 @@ namespace CapaPresentacion
                 mnuMEgresos1.Enabled = false;
                 mnuMFacturacion1.Enabled = false;
                 mnuMProduccion1.Enabled = false;
+                mnuMIMP1.Enabled = false;
+                mnuMEgresoMP1.Enabled = false;
 
                 mnuResumenes.Enabled = false;
                 mnuRIngresos1.Enabled = false;
@@ -329,6 +337,28 @@ namespace CapaPresentacion
             frmKardexFull frm = new frmKardexFull();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void mnuMProduccion1_Click(object sender, EventArgs e)
+        {
+            frmCalculoProduccion frm = new frmCalculoProduccion();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuMIMP1_Click(object sender, EventArgs e)
+        {
+            P_IngresoMP frm = new P_IngresoMP();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void mnuMEgresoMP1_Click(object sender, EventArgs e)
+        {
+            P_EgresoMP frm = new P_EgresoMP();
+            frm.MdiParent = this;
+            frm.Show();
+
         }
     }
 }

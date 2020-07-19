@@ -69,8 +69,7 @@ namespace CapaDatos
             }
 
         }
-
-
+        
         public DataTable BuscarArticuloPTCodigo(string Valor)
         {
             // Buscar Articulos en por Codigo de Barras 
@@ -130,8 +129,7 @@ namespace CapaDatos
             }
 
         }
-
-
+        
         public DataTable ConsultarFechas(DateTime fechaini, DateTime fechafin)
         {
             SqlDataReader Resultado;
@@ -161,8 +159,7 @@ namespace CapaDatos
             }
 
         }
-
-
+        
         public DataTable ListarDetalle(int IdDocumento)
         {
             SqlDataReader Resultado;

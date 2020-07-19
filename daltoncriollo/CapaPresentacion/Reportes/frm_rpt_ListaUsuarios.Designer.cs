@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
             this.spLisUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spLisUsuariosTableAdapter = new CapaPresentacion.Reportes.dsSistemaTableAdapters.spLisUsuariosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLisUsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spLisUsuariosBindingSource
+            // 
+            this.spLisUsuariosBindingSource.DataMember = "spLisUsuarios";
+            this.spLisUsuariosBindingSource.DataSource = this.dsSistema;
+            // 
+            // dsSistema
+            // 
+            this.dsSistema.DataSetName = "dsSistema";
+            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,18 +57,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.rptListaUsuarios.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(478, 451);
+            this.reportViewer1.Size = new System.Drawing.Size(604, 451);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dsSistema
-            // 
-            this.dsSistema.DataSetName = "dsSistema";
-            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // spLisUsuariosBindingSource
-            // 
-            this.spLisUsuariosBindingSource.DataMember = "spLisUsuarios";
-            this.spLisUsuariosBindingSource.DataSource = this.dsSistema;
             // 
             // spLisUsuariosTableAdapter
             // 
@@ -68,14 +68,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 451);
+            this.ClientSize = new System.Drawing.Size(604, 451);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_rpt_ListaUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Usuarios";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_rpt_ListaUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLisUsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             this.ResumeLayout(false);
 
         }

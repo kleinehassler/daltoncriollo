@@ -44,7 +44,6 @@ namespace CapaDatos
 
         }
 
-
         public DataTable Buscar(string Valor)
         {
             SqlDataReader Resultado;
@@ -73,8 +72,7 @@ namespace CapaDatos
             }
 
         }
-
-
+        
         public DataTable BuscarCodigoArt(string Valor)
         {
             SqlDataReader Resultado;
@@ -103,9 +101,36 @@ namespace CapaDatos
             }
 
         }
+        
+        public DataTable BuscarCodigoArtMP(string Valor)
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("articulo_buscar_codigo_mp", SqlCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                Comando.Parameters.Add("@valor", SqlDbType.VarChar).Value = Valor;
+                SqlCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
 
+            }
 
+        }
+        
         public string Existe(string Valor)
         {
             string Rpta = "";
@@ -138,9 +163,6 @@ namespace CapaDatos
             return Rpta;
         }
         
-
-
-
         public string Insertar(E_Articulo Obj)
         {
             string Rpta = "";
@@ -173,8 +195,6 @@ namespace CapaDatos
             return Rpta;
         }
         
-
-
         public string Actualizar(E_Articulo Obj)
         {
             string Rpta = "";
@@ -207,8 +227,6 @@ namespace CapaDatos
             return Rpta;
         }
         
-        
-
         public string  Eliminar(E_Articulo Obj)
         {
                 string Rpta = "";

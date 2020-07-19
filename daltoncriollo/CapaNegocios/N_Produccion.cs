@@ -28,6 +28,13 @@ namespace CapaNegocios
 
         }
 
+        public static DataTable BuscarMP(int idPT, decimal requerimiento)
+        {
+            D_Produccion Datos = new D_Produccion();
+            return Datos.BuscarMP(idPT, requerimiento);
+
+        }
+
         public static DataTable SeleccionarPT()
         {
             D_Produccion Datos = new D_Produccion();

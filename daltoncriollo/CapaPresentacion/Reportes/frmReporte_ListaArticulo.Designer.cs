@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
             this.spLisArtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSistema = new CapaPresentacion.Reportes.dsSistema();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.spLisArtTableAdapter = new CapaPresentacion.Reportes.dsSistemaTableAdapters.spLisArtTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLisArtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).BeginInit();
             this.SuspendLayout();
+            // 
+            // spLisArtBindingSource
+            // 
+            this.spLisArtBindingSource.DataMember = "spLisArt";
+            this.spLisArtBindingSource.DataSource = this.dsSistema;
+            // 
+            // dsSistema
+            // 
+            this.dsSistema.DataSetName = "dsSistema";
+            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -50,16 +60,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(782, 504);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dsSistema
-            // 
-            this.dsSistema.DataSetName = "dsSistema";
-            this.dsSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // spLisArtBindingSource
-            // 
-            this.spLisArtBindingSource.DataMember = "spLisArt";
-            this.spLisArtBindingSource.DataSource = this.dsSistema;
-            // 
             // spLisArtTableAdapter
             // 
             this.spLisArtTableAdapter.ClearBeforeFill = true;
@@ -71,11 +71,11 @@
             this.ClientSize = new System.Drawing.Size(782, 504);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReporte_ListaArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReporte_ListaArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLisArtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSistema)).EndInit();
             this.ResumeLayout(false);
 
         }
