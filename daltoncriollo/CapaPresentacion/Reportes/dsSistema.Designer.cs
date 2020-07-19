@@ -2700,13 +2700,6 @@ namespace CapaPresentacion.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spDocumentos_Comprobante_FacturaRow FindByidedocumento(int idedocumento) {
-                return ((spDocumentos_Comprobante_FacturaRow)(this.Rows.Find(new object[] {
-                            idedocumento})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 spDocumentos_Comprobante_FacturaDataTable cln = ((spDocumentos_Comprobante_FacturaDataTable)(base.Clone()));
                 cln.InitVars();
@@ -2796,14 +2789,11 @@ namespace CapaPresentacion.Reportes {
                 base.Columns.Add(this.columnprecio);
                 this.columnimporte = new global::System.Data.DataColumn("importe", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimporte);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidedocumento}, true));
                 this.columnidedocumento.AutoIncrement = true;
                 this.columnidedocumento.AutoIncrementSeed = -1;
                 this.columnidedocumento.AutoIncrementStep = -1;
                 this.columnidedocumento.AllowDBNull = false;
                 this.columnidedocumento.ReadOnly = true;
-                this.columnidedocumento.Unique = true;
                 this.columnseriedocu.MaxLength = 50;
                 this.columnnumdocu.MaxLength = 50;
                 this.columnnombredocu.MaxLength = 50;
@@ -3304,13 +3294,6 @@ namespace CapaPresentacion.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spDocumentos_Comprobante_IngresoRow FindByidedocumento(int idedocumento) {
-                return ((spDocumentos_Comprobante_IngresoRow)(this.Rows.Find(new object[] {
-                            idedocumento})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 spDocumentos_Comprobante_IngresoDataTable cln = ((spDocumentos_Comprobante_IngresoDataTable)(base.Clone()));
                 cln.InitVars();
@@ -3400,14 +3383,11 @@ namespace CapaPresentacion.Reportes {
                 base.Columns.Add(this.columnprecio);
                 this.columnimporte = new global::System.Data.DataColumn("importe", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimporte);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidedocumento}, true));
                 this.columnidedocumento.AutoIncrement = true;
                 this.columnidedocumento.AutoIncrementSeed = -1;
                 this.columnidedocumento.AutoIncrementStep = -1;
                 this.columnidedocumento.AllowDBNull = false;
                 this.columnidedocumento.ReadOnly = true;
-                this.columnidedocumento.Unique = true;
                 this.columnseriedocu.MaxLength = 50;
                 this.columnnumdocu.MaxLength = 50;
                 this.columnnombredocu.MaxLength = 50;
@@ -3908,13 +3888,6 @@ namespace CapaPresentacion.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public spDocumentos_Comprobante_EgresoRow FindByidedocumento(int idedocumento) {
-                return ((spDocumentos_Comprobante_EgresoRow)(this.Rows.Find(new object[] {
-                            idedocumento})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 spDocumentos_Comprobante_EgresoDataTable cln = ((spDocumentos_Comprobante_EgresoDataTable)(base.Clone()));
                 cln.InitVars();
@@ -4004,14 +3977,11 @@ namespace CapaPresentacion.Reportes {
                 base.Columns.Add(this.columnprecio);
                 this.columnimporte = new global::System.Data.DataColumn("importe", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimporte);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidedocumento}, true));
                 this.columnidedocumento.AutoIncrement = true;
                 this.columnidedocumento.AutoIncrementSeed = -1;
                 this.columnidedocumento.AutoIncrementStep = -1;
                 this.columnidedocumento.AllowDBNull = false;
                 this.columnidedocumento.ReadOnly = true;
-                this.columnidedocumento.Unique = true;
                 this.columnseriedocu.MaxLength = 50;
                 this.columnnumdocu.MaxLength = 50;
                 this.columnnombredocu.MaxLength = 50;

@@ -303,7 +303,7 @@
   <xs:element name="dsSistema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSistema" msprop:Generator_UserDSName="dsSistema">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="spLisArt" msprop:Generator_TableClassName="spLisArtDataTable" msprop:Generator_TableVarName="tablespLisArt" msprop:Generator_RowChangedName="spLisArtRowChanged" msprop:Generator_TablePropName="spLisArt" msprop:Generator_RowDeletingName="spLisArtRowDeleting" msprop:Generator_RowChangingName="spLisArtRowChanging" msprop:Generator_RowEvHandlerName="spLisArtRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisArtRowDeleted" msprop:Generator_RowClassName="spLisArtRow" msprop:Generator_UserTableName="spLisArt" msprop:Generator_RowEvArgName="spLisArtRowChangeEvent">
+        <xs:element name="spLisArt" msprop:Generator_TableClassName="spLisArtDataTable" msprop:Generator_TableVarName="tablespLisArt" msprop:Generator_TablePropName="spLisArt" msprop:Generator_RowDeletingName="spLisArtRowDeleting" msprop:Generator_RowChangingName="spLisArtRowChanging" msprop:Generator_RowEvHandlerName="spLisArtRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisArtRowDeleted" msprop:Generator_UserTableName="spLisArt" msprop:Generator_RowChangedName="spLisArtRowChanged" msprop:Generator_RowEvArgName="spLisArtRowChangeEvent" msprop:Generator_RowClassName="spLisArtRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TipoArt" msprop:Generator_ColumnVarNameInTable="columnTipoArt" msprop:Generator_ColumnPropNameInRow="TipoArt" msprop:Generator_ColumnPropNameInTable="TipoArtColumn" msprop:Generator_UserColumnName="TipoArt" minOccurs="0">
@@ -340,7 +340,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spLisSujetos" msprop:Generator_TableClassName="spLisSujetosDataTable" msprop:Generator_TableVarName="tablespLisSujetos" msprop:Generator_TablePropName="spLisSujetos" msprop:Generator_RowDeletingName="spLisSujetosRowDeleting" msprop:Generator_RowChangingName="spLisSujetosRowChanging" msprop:Generator_RowEvHandlerName="spLisSujetosRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisSujetosRowDeleted" msprop:Generator_UserTableName="spLisSujetos" msprop:Generator_RowChangedName="spLisSujetosRowChanged" msprop:Generator_RowEvArgName="spLisSujetosRowChangeEvent" msprop:Generator_RowClassName="spLisSujetosRow">
+        <xs:element name="spLisSujetos" msprop:Generator_TableClassName="spLisSujetosDataTable" msprop:Generator_TableVarName="tablespLisSujetos" msprop:Generator_RowChangedName="spLisSujetosRowChanged" msprop:Generator_TablePropName="spLisSujetos" msprop:Generator_RowDeletingName="spLisSujetosRowDeleting" msprop:Generator_RowChangingName="spLisSujetosRowChanging" msprop:Generator_RowEvHandlerName="spLisSujetosRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisSujetosRowDeleted" msprop:Generator_RowClassName="spLisSujetosRow" msprop:Generator_UserTableName="spLisSujetos" msprop:Generator_RowEvArgName="spLisSujetosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ApeNom" msprop:Generator_ColumnVarNameInTable="columnApeNom" msprop:Generator_ColumnPropNameInRow="ApeNom" msprop:Generator_ColumnPropNameInTable="ApeNomColumn" msprop:Generator_UserColumnName="ApeNom" minOccurs="0">
@@ -395,7 +395,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spLisBodegas" msprop:Generator_TableClassName="spLisBodegasDataTable" msprop:Generator_TableVarName="tablespLisBodegas" msprop:Generator_TablePropName="spLisBodegas" msprop:Generator_RowDeletingName="spLisBodegasRowDeleting" msprop:Generator_RowChangingName="spLisBodegasRowChanging" msprop:Generator_RowEvHandlerName="spLisBodegasRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisBodegasRowDeleted" msprop:Generator_UserTableName="spLisBodegas" msprop:Generator_RowChangedName="spLisBodegasRowChanged" msprop:Generator_RowEvArgName="spLisBodegasRowChangeEvent" msprop:Generator_RowClassName="spLisBodegasRow">
+        <xs:element name="spLisBodegas" msprop:Generator_TableClassName="spLisBodegasDataTable" msprop:Generator_TableVarName="tablespLisBodegas" msprop:Generator_RowChangedName="spLisBodegasRowChanged" msprop:Generator_TablePropName="spLisBodegas" msprop:Generator_RowDeletingName="spLisBodegasRowDeleting" msprop:Generator_RowChangingName="spLisBodegasRowChanging" msprop:Generator_RowEvHandlerName="spLisBodegasRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisBodegasRowDeleted" msprop:Generator_RowClassName="spLisBodegasRow" msprop:Generator_UserTableName="spLisBodegas" msprop:Generator_RowEvArgName="spLisBodegasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NombreBodega" msprop:Generator_ColumnVarNameInTable="columnNombreBodega" msprop:Generator_ColumnPropNameInRow="NombreBodega" msprop:Generator_ColumnPropNameInTable="NombreBodegaColumn" msprop:Generator_UserColumnName="NombreBodega" minOccurs="0">
@@ -423,7 +423,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spLisUsuarios" msprop:Generator_TableClassName="spLisUsuariosDataTable" msprop:Generator_TableVarName="tablespLisUsuarios" msprop:Generator_TablePropName="spLisUsuarios" msprop:Generator_RowDeletingName="spLisUsuariosRowDeleting" msprop:Generator_RowChangingName="spLisUsuariosRowChanging" msprop:Generator_RowEvHandlerName="spLisUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisUsuariosRowDeleted" msprop:Generator_UserTableName="spLisUsuarios" msprop:Generator_RowChangedName="spLisUsuariosRowChanged" msprop:Generator_RowEvArgName="spLisUsuariosRowChangeEvent" msprop:Generator_RowClassName="spLisUsuariosRow">
+        <xs:element name="spLisUsuarios" msprop:Generator_TableClassName="spLisUsuariosDataTable" msprop:Generator_TableVarName="tablespLisUsuarios" msprop:Generator_RowChangedName="spLisUsuariosRowChanged" msprop:Generator_TablePropName="spLisUsuarios" msprop:Generator_RowDeletingName="spLisUsuariosRowDeleting" msprop:Generator_RowChangingName="spLisUsuariosRowChanging" msprop:Generator_RowEvHandlerName="spLisUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="spLisUsuariosRowDeleted" msprop:Generator_RowClassName="spLisUsuariosRow" msprop:Generator_UserTableName="spLisUsuarios" msprop:Generator_RowEvArgName="spLisUsuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NombreUsuario" msprop:Generator_ColumnVarNameInTable="columnNombreUsuario" msprop:Generator_ColumnPropNameInRow="NombreUsuario" msprop:Generator_ColumnPropNameInTable="NombreUsuarioColumn" msprop:Generator_UserColumnName="NombreUsuario" minOccurs="0">
@@ -473,7 +473,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spListDocuments" msprop:Generator_TableClassName="spListDocumentsDataTable" msprop:Generator_TableVarName="tablespListDocuments" msprop:Generator_TablePropName="spListDocuments" msprop:Generator_RowDeletingName="spListDocumentsRowDeleting" msprop:Generator_RowChangingName="spListDocumentsRowChanging" msprop:Generator_RowEvHandlerName="spListDocumentsRowChangeEventHandler" msprop:Generator_RowDeletedName="spListDocumentsRowDeleted" msprop:Generator_UserTableName="spListDocuments" msprop:Generator_RowChangedName="spListDocumentsRowChanged" msprop:Generator_RowEvArgName="spListDocumentsRowChangeEvent" msprop:Generator_RowClassName="spListDocumentsRow">
+        <xs:element name="spListDocuments" msprop:Generator_TableClassName="spListDocumentsDataTable" msprop:Generator_TableVarName="tablespListDocuments" msprop:Generator_RowChangedName="spListDocumentsRowChanged" msprop:Generator_TablePropName="spListDocuments" msprop:Generator_RowDeletingName="spListDocumentsRowDeleting" msprop:Generator_RowChangingName="spListDocumentsRowChanging" msprop:Generator_RowEvHandlerName="spListDocumentsRowChangeEventHandler" msprop:Generator_RowDeletedName="spListDocumentsRowDeleted" msprop:Generator_RowClassName="spListDocumentsRow" msprop:Generator_UserTableName="spListDocuments" msprop:Generator_RowEvArgName="spListDocumentsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -521,7 +521,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spDocumentos_Comprobante_Factura" msprop:Generator_TableClassName="spDocumentos_Comprobante_FacturaDataTable" msprop:Generator_TableVarName="tablespDocumentos_Comprobante_Factura" msprop:Generator_RowChangedName="spDocumentos_Comprobante_FacturaRowChanged" msprop:Generator_TablePropName="spDocumentos_Comprobante_Factura" msprop:Generator_RowDeletingName="spDocumentos_Comprobante_FacturaRowDeleting" msprop:Generator_RowChangingName="spDocumentos_Comprobante_FacturaRowChanging" msprop:Generator_RowEvHandlerName="spDocumentos_Comprobante_FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="spDocumentos_Comprobante_FacturaRowDeleted" msprop:Generator_RowClassName="spDocumentos_Comprobante_FacturaRow" msprop:Generator_UserTableName="spDocumentos_Comprobante_Factura" msprop:Generator_RowEvArgName="spDocumentos_Comprobante_FacturaRowChangeEvent">
+        <xs:element name="spDocumentos_Comprobante_Factura" msprop:Generator_TableClassName="spDocumentos_Comprobante_FacturaDataTable" msprop:Generator_TableVarName="tablespDocumentos_Comprobante_Factura" msprop:Generator_TablePropName="spDocumentos_Comprobante_Factura" msprop:Generator_RowDeletingName="spDocumentos_Comprobante_FacturaRowDeleting" msprop:Generator_RowChangingName="spDocumentos_Comprobante_FacturaRowChanging" msprop:Generator_RowEvHandlerName="spDocumentos_Comprobante_FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="spDocumentos_Comprobante_FacturaRowDeleted" msprop:Generator_UserTableName="spDocumentos_Comprobante_Factura" msprop:Generator_RowChangedName="spDocumentos_Comprobante_FacturaRowChanged" msprop:Generator_RowEvArgName="spDocumentos_Comprobante_FacturaRowChangeEvent" msprop:Generator_RowClassName="spDocumentos_Comprobante_FacturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idedocumento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidedocumento" msprop:Generator_ColumnPropNameInRow="idedocumento" msprop:Generator_ColumnPropNameInTable="idedocumentoColumn" msprop:Generator_UserColumnName="idedocumento" type="xs:int" />
@@ -622,7 +622,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spDocumentos_Comprobante_Ingreso" msprop:Generator_TableClassName="spDocumentos_Comprobante_IngresoDataTable" msprop:Generator_TableVarName="tablespDocumentos_Comprobante_Ingreso" msprop:Generator_RowChangedName="spDocumentos_Comprobante_IngresoRowChanged" msprop:Generator_TablePropName="spDocumentos_Comprobante_Ingreso" msprop:Generator_RowDeletingName="spDocumentos_Comprobante_IngresoRowDeleting" msprop:Generator_RowChangingName="spDocumentos_Comprobante_IngresoRowChanging" msprop:Generator_RowEvHandlerName="spDocumentos_Comprobante_IngresoRowChangeEventHandler" msprop:Generator_RowDeletedName="spDocumentos_Comprobante_IngresoRowDeleted" msprop:Generator_RowClassName="spDocumentos_Comprobante_IngresoRow" msprop:Generator_UserTableName="spDocumentos_Comprobante_Ingreso" msprop:Generator_RowEvArgName="spDocumentos_Comprobante_IngresoRowChangeEvent">
+        <xs:element name="spDocumentos_Comprobante_Ingreso" msprop:Generator_TableClassName="spDocumentos_Comprobante_IngresoDataTable" msprop:Generator_TableVarName="tablespDocumentos_Comprobante_Ingreso" msprop:Generator_TablePropName="spDocumentos_Comprobante_Ingreso" msprop:Generator_RowDeletingName="spDocumentos_Comprobante_IngresoRowDeleting" msprop:Generator_RowChangingName="spDocumentos_Comprobante_IngresoRowChanging" msprop:Generator_RowEvHandlerName="spDocumentos_Comprobante_IngresoRowChangeEventHandler" msprop:Generator_RowDeletedName="spDocumentos_Comprobante_IngresoRowDeleted" msprop:Generator_UserTableName="spDocumentos_Comprobante_Ingreso" msprop:Generator_RowChangedName="spDocumentos_Comprobante_IngresoRowChanged" msprop:Generator_RowEvArgName="spDocumentos_Comprobante_IngresoRowChangeEvent" msprop:Generator_RowClassName="spDocumentos_Comprobante_IngresoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idedocumento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidedocumento" msprop:Generator_ColumnPropNameInRow="idedocumento" msprop:Generator_ColumnPropNameInTable="idedocumentoColumn" msprop:Generator_UserColumnName="idedocumento" type="xs:int" />
@@ -723,7 +723,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spDocumentos_Comprobante_Egreso" msprop:Generator_TableClassName="spDocumentos_Comprobante_EgresoDataTable" msprop:Generator_TableVarName="tablespDocumentos_Comprobante_Egreso" msprop:Generator_RowChangedName="spDocumentos_Comprobante_EgresoRowChanged" msprop:Generator_TablePropName="spDocumentos_Comprobante_Egreso" msprop:Generator_RowDeletingName="spDocumentos_Comprobante_EgresoRowDeleting" msprop:Generator_RowChangingName="spDocumentos_Comprobante_EgresoRowChanging" msprop:Generator_RowEvHandlerName="spDocumentos_Comprobante_EgresoRowChangeEventHandler" msprop:Generator_RowDeletedName="spDocumentos_Comprobante_EgresoRowDeleted" msprop:Generator_RowClassName="spDocumentos_Comprobante_EgresoRow" msprop:Generator_UserTableName="spDocumentos_Comprobante_Egreso" msprop:Generator_RowEvArgName="spDocumentos_Comprobante_EgresoRowChangeEvent">
+        <xs:element name="spDocumentos_Comprobante_Egreso" msprop:Generator_TableClassName="spDocumentos_Comprobante_EgresoDataTable" msprop:Generator_TableVarName="tablespDocumentos_Comprobante_Egreso" msprop:Generator_TablePropName="spDocumentos_Comprobante_Egreso" msprop:Generator_RowDeletingName="spDocumentos_Comprobante_EgresoRowDeleting" msprop:Generator_RowChangingName="spDocumentos_Comprobante_EgresoRowChanging" msprop:Generator_RowEvHandlerName="spDocumentos_Comprobante_EgresoRowChangeEventHandler" msprop:Generator_RowDeletedName="spDocumentos_Comprobante_EgresoRowDeleted" msprop:Generator_UserTableName="spDocumentos_Comprobante_Egreso" msprop:Generator_RowChangedName="spDocumentos_Comprobante_EgresoRowChanged" msprop:Generator_RowEvArgName="spDocumentos_Comprobante_EgresoRowChangeEvent" msprop:Generator_RowClassName="spDocumentos_Comprobante_EgresoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idedocumento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidedocumento" msprop:Generator_ColumnPropNameInRow="idedocumento" msprop:Generator_ColumnPropNameInTable="idedocumentoColumn" msprop:Generator_UserColumnName="idedocumento" type="xs:int" />
@@ -824,7 +824,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="spKardex" msprop:Generator_TableClassName="spKardexDataTable" msprop:Generator_TableVarName="tablespKardex" msprop:Generator_TablePropName="spKardex" msprop:Generator_RowDeletingName="spKardexRowDeleting" msprop:Generator_RowChangingName="spKardexRowChanging" msprop:Generator_RowEvHandlerName="spKardexRowChangeEventHandler" msprop:Generator_RowDeletedName="spKardexRowDeleted" msprop:Generator_UserTableName="spKardex" msprop:Generator_RowChangedName="spKardexRowChanged" msprop:Generator_RowEvArgName="spKardexRowChangeEvent" msprop:Generator_RowClassName="spKardexRow">
+        <xs:element name="spKardex" msprop:Generator_TableClassName="spKardexDataTable" msprop:Generator_TableVarName="tablespKardex" msprop:Generator_RowChangedName="spKardexRowChanged" msprop:Generator_TablePropName="spKardex" msprop:Generator_RowDeletingName="spKardexRowDeleting" msprop:Generator_RowChangingName="spKardexRowChanging" msprop:Generator_RowEvHandlerName="spKardexRowChangeEventHandler" msprop:Generator_RowDeletedName="spKardexRowDeleted" msprop:Generator_RowClassName="spKardexRow" msprop:Generator_UserTableName="spKardex" msprop:Generator_RowEvArgName="spKardexRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idedocumento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidedocumento" msprop:Generator_ColumnPropNameInRow="idedocumento" msprop:Generator_ColumnPropNameInTable="idedocumentoColumn" msprop:Generator_UserColumnName="idedocumento" type="xs:int" />
@@ -943,18 +943,6 @@
     <xs:unique name="spListDocuments_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:spListDocuments" />
       <xs:field xpath="mstns:id" />
-    </xs:unique>
-    <xs:unique name="spDocumentos_Comprobante_Factura_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:spDocumentos_Comprobante_Factura" />
-      <xs:field xpath="mstns:idedocumento" />
-    </xs:unique>
-    <xs:unique name="spDocumentos_Comprobante_Ingreso_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:spDocumentos_Comprobante_Ingreso" />
-      <xs:field xpath="mstns:idedocumento" />
-    </xs:unique>
-    <xs:unique name="spDocumentos_Comprobante_Egreso_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:spDocumentos_Comprobante_Egreso" />
-      <xs:field xpath="mstns:idedocumento" />
     </xs:unique>
     <xs:unique name="spKardex_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:spKardex" />
